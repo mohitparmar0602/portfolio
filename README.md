@@ -1,72 +1,71 @@
 
-# 🎮 PUBG Themed Portfolio - Mohit Parmar
+# �️ Call of Duty: Warzone Themed Portfolio - Mohit Parmar
 
-> "Winner Winner Chicken Dinner!" - Welcome to my battleground.
+> "Bravo Six, Going Dark." - Welcome to the Warzone.
 
-A unique, interactive, and gamified portfolio website inspired by the popular battle royale game **PUBG (PlayerUnknown's Battlegrounds)**. Built with **React**, **TailwindCSS**, and **Framer Motion**, this portfolio treats my professional journey as a game, with missions, loadouts, and achievements.
+A high-octane, tactical, and interactive portfolio website inspired by **Call of Duty: Modern Warfare / Warzone**. Featuring a "Black Ops" aesthetic with neon green accents, this portfolio treats my professional career as a tactical operation.
 
-## 🌟 Features
+## 📍 Tactical Map (Features)
 
-- **Lobby (Home)**: Enter the battleground with a dynamic introduction.
-- **Player Profile (About)**: View player stats, role, and background story.
-- **Technical Arsenal (Skills)**: Explore my weapon loadout (Introduction to programming languages, frameworks, and tools).
-- **Missions (Projects)**: Browse through completed missions and ongoing operations.
-- **Achievements (Certificates)**: View earned badges and certifications.
-- **Invite to Squad (Contact)**: Direct line of communication to recruit me for your squad.
-- **Responsive Design**: Optimized for all devices, from mobile scopes to desktop 8x scopes.
-- **Animations**: Smooth transitions and effects powered by Framer Motion.
+- **Briefing (Home)**: Mission start. Dynamic introduction and objective setting.
+- **Operator Profile (About)**: Personnel dossier, service record, and operational history.
+- **Loadout (Skills)**: Custom class setup. Programming languages, frameworks, and tactical equipment (tools).
+- **Special Ops (Projects)**: Declassified mission reports and completed objectives.
+- **Commendations (Certificates)**: Medals, ribbons, and certifications earned in the field.
+- **Comms Channel (Contact)**: Encrypted line to recruit this operator for your squad.
+- **Visuals**: Dark mode interface with night-vision green highlights, inspired by COD UI.
 
-## 🛠️ Tech Stack
+## 🎒 Custom Class (Tech Stack)
 
-- **Frontend**: React.js (Vite)
-- **Styling**: TailwindCSS
-- **Animations**: Framer Motion, Typewriter Effect
-- **Icons**: FontAwesome
+- **Primary Weapon**: React.js (Vite)
+- **Camo**: TailwindCSS (Black & Green)
+- **Perks**: Framer Motion, Typewriter Effect
+- **Attachments**: FontAwesome Icons
 
-## 🚀 Getting Started
+## � Deploy to Area
 
-To run this project locally on your machine:
+To run this operation locally:
 
-1.  **Clone the repository**
+1.  **Secure the Intelligence (Clone)**
     ```bash
     git clone https://github.com/mohitparmar0602/portfolio.git
     cd portfolio
     ```
 
-2.  **Install Dependencies**
+2.  **Resupply (Install)**
     ```bash
     npm install
     ```
 
-3.  **Start the Development Server**
+3.  **Start Mission (Run)**
     ```bash
     npm run dev
     ```
 
-4.  Open your browser and navigate to `http://localhost:5173` (or the port shown in your terminal).
+4.  **Check Radar**: Navigate to `http://localhost:5173`.
 
-## 📂 Project Structure
+## 📂 Intel Structure
 
 ```
 src/
-├── components/       # Game components (About, Contact, Hero, etc.)
-├── constants/        # Data assets (Projects, Skills, Contact Info)
-├── App.jsx           # Main game loop
-├── main.jsx          # Entry point
-└── index.css         # Global styles
+├── components/       # Tactical Assets (About, Contact, Hero)
+├── constants/        # Mission Data (Projects, Skills)
+├── App.jsx           # Main Operation Loop
+├── main.jsx          # Extraction Point
+└── index.css         # Camouflage Pattern
 ```
 
-## 📜 License
+## 📜 Rules of Engagement (License)
 
-This project is for portfolio purposes. All distinct game assets and terminologies are inspired by PUBG.
+This project is for portfolio purposes. All distinct game assets and terminologies are inspired by Activision's Call of Duty franchise.
 
-## 📞 Contact - Invite to Squad
+## 🎧 Establish Comms
 
-- **Player Name**: Mohit Parmar
-- **Role**: Full Stack Developer
-- **Email**: [mohitparmar22584@gmail.com](mailto:mohitparmar22584@gmail.com)
-- **LinkedIn**: [Mohit Parmar](https://linkedin.com/in/mohitparmar0602)
-- **GitHub**: [mohitparmar0602](https://github.com/mohitparmar0602)
+- **Operator**: Mohit "Ghost" Parmar
+- **Class**: Full Stack Developer
+- **Radio**: [mohitparmar22584@gmail.com](mailto:mohitparmar22584@gmail.com)
+- **Dossier**: [Mohit Parmar](https://linkedin.com/in/mohitparmar0602)
+- **Barracks**: [mohitparmar0602](https://github.com/mohitparmar0602)
 
 ---
-*Built with ❤️ and ☕ by Mohit Parmar*
+*Stay Frosty. Mission is a Go.*
