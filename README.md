@@ -1,16 +1,72 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🎮 PUBG Themed Portfolio - Mohit Parmar
 
-Currently, two official plugins are available:
+> "Winner Winner Chicken Dinner!" - Welcome to my battleground.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A unique, interactive, and gamified portfolio website inspired by the popular battle royale game **PUBG (PlayerUnknown's Battlegrounds)**. Built with **React**, **TailwindCSS**, and **Framer Motion**, this portfolio treats my professional journey as a game, with missions, loadouts, and achievements.
 
-## React Compiler
+## 🌟 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Lobby (Home)**: Enter the battleground with a dynamic introduction.
+- **Player Profile (About)**: View player stats, role, and background story.
+- **Technical Arsenal (Skills)**: Explore my weapon loadout (Introduction to programming languages, frameworks, and tools).
+- **Missions (Projects)**: Browse through completed missions and ongoing operations.
+- **Achievements (Certificates)**: View earned badges and certifications.
+- **Invite to Squad (Contact)**: Direct line of communication to recruit me for your squad.
+- **Responsive Design**: Optimized for all devices, from mobile scopes to desktop 8x scopes.
+- **Animations**: Smooth transitions and effects powered by Framer Motion.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React.js (Vite)
+- **Styling**: TailwindCSS
+- **Animations**: Framer Motion, Typewriter Effect
+- **Icons**: FontAwesome
+
+## 🚀 Getting Started
+
+To run this project locally on your machine:
+
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/mohitparmar0602/portfolio.git
+    cd portfolio
+    ```
+
+2.  **Install Dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Start the Development Server**
+    ```bash
+    npm run dev
+    ```
+
+4.  Open your browser and navigate to `http://localhost:5173` (or the port shown in your terminal).
+
+## 📂 Project Structure
+
+```
+src/
+├── components/       # Game components (About, Contact, Hero, etc.)
+├── constants/        # Data assets (Projects, Skills, Contact Info)
+├── App.jsx           # Main game loop
+├── main.jsx          # Entry point
+└── index.css         # Global styles
+```
+
+## 📜 License
+
+This project is for portfolio purposes. All distinct game assets and terminologies are inspired by PUBG.
+
+## 📞 Contact - Invite to Squad
+
+- **Player Name**: Mohit Parmar
+- **Role**: Full Stack Developer
+- **Email**: [mohitparmar22584@gmail.com](mailto:mohitparmar22584@gmail.com)
+- **LinkedIn**: [Mohit Parmar](https://linkedin.com/in/mohitparmar0602)
+- **GitHub**: [mohitparmar0602](https://github.com/mohitparmar0602)
+
+---
+*Built with ❤️ and ☕ by Mohit Parmar*
