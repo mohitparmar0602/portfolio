@@ -1,5 +1,5 @@
 import React from 'react';
-import { CONTACT_INFO, NAV_LINKS } from '../constants';
+import { CONTACT_INFO } from '../constants';
 
 const Footer = () => {
     return (
@@ -25,20 +25,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Nav Links */}
-                    <div>
-                        <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-4">Quick Links</h4>
-                        <ul className="space-y-2">
-                            {NAV_LINKS.map(link => (
-                                <li key={link.id}>
-                                    <a href={link.id} className="text-gray-500 hover:text-green-400 text-sm transition-colors duration-200 flex items-center gap-2 group">
-                                        <span className="w-4 h-[1px] bg-green-400 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                                        {link.label}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+
 
                     {/* Contact */}
                     <div>

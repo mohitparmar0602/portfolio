@@ -1,8 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CONTACT_INFO } from '../constants';
 import { motion } from 'framer-motion';
 
+// ✅ Replace YOUR_FORM_ID below with your Formspree endpoint ID
+// Sign up free at https://formspree.io → New Form → copy the ID from the URL
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xykbyeqw';
+
 const Contact = () => {
+    const [status, setStatus] = useState('idle'); // idle | loading | success | error
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus('loading');
+        const form = e.target;
+        const data = {
+            name: form.name.value,
+            email: form.email.value,
+            message: form.message.value,
+        };
+
+        try {
+            const res = await fetch(FORMSPREE_ENDPOINT, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+                body: JSON.stringify(data),
+            });
+            if (res.ok) {
+                setStatus('success');
+                form.reset();
+            } else {
+                setStatus('error');
+            }
+        } catch {
+            setStatus('error');
+        }
+    };
+
     return (
         <section className="py-20 max-w-4xl mx-auto px-6">
 
@@ -30,16 +63,11 @@ const Contact = () => {
                             transition={{ duration: 0.5 }}
                             className="relative flex flex-col md:flex-row md:justify-between items-center w-full group"
                         >
-                            {/* Dot */}
                             <div className="absolute left-4 sm:left-8 md:left-1/2 -translate-x-1/2 w-6 h-6 bg-green-500 rounded-full border-[5px] border-[#080808] z-10 group-hover:scale-125 group-hover:shadow-[0_0_20px_rgba(34,197,94,0.6)] transition-all duration-300 hidden sm:block"></div>
-                            
-                            {/* Content Left */}
                             <div className="hidden md:block w-5/12 text-right pr-14">
                                 <p className="text-green-400 font-bold text-3xl font-mono tracking-tight drop-shadow-[0_0_10px_rgba(34,197,94,0.3)]">CGPA: 6.55</p>
                                 <p className="text-gray-500 text-sm mt-2 uppercase tracking-widest font-bold">2023 - Present</p>
                             </div>
-                            
-                            {/* Content Right */}
                             <div className="w-full sm:pl-20 md:pl-14 md:w-5/12">
                                 <div className="glass-card p-8 rounded-2xl border border-white/5 group-hover:border-green-400/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(34,197,94,0.15)] relative overflow-hidden">
                                     <div className="absolute top-0 right-0 w-32 h-32 bg-green-500/10 rounded-full blur-[40px] -translate-y-1/2 translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -48,8 +76,6 @@ const Contact = () => {
                                         Lovely Professional University
                                     </h4>
                                     <p className="text-gray-400/90 text-base font-medium">Bachelor of Technology - Computer Science</p>
-                                    
-                                    {/* Mobile Meta */}
                                     <div className="md:hidden mt-6 pt-5 border-t border-white/5 flex justify-between items-center">
                                         <span className="text-green-400 font-bold font-mono text-xl">CGPA: 6.55</span>
                                         <span className="text-gray-500 text-xs uppercase font-bold text-right ml-2">2023 - Present</span>
@@ -65,16 +91,11 @@ const Contact = () => {
                             transition={{ duration: 0.5, delay: 0.1 }}
                             className="relative flex flex-col md:flex-row-reverse md:justify-between items-center w-full group"
                         >
-                            {/* Dot */}
                             <div className="absolute left-4 sm:left-8 md:left-1/2 -translate-x-1/2 w-5 h-5 bg-gray-600 group-hover:bg-green-400 rounded-full border-4 border-[#080808] z-10 transition-colors duration-300 hidden sm:block"></div>
-                            
-                            {/* Content Right */}
                             <div className="hidden md:block w-5/12 text-left pl-14">
                                 <p className="text-gray-300 group-hover:text-green-400 font-bold text-3xl font-mono tracking-tight transition-colors">78%</p>
                                 <p className="text-gray-500 text-sm mt-2 uppercase tracking-widest font-bold">Apr' 21 - Mar' 22</p>
                             </div>
-                            
-                            {/* Content Left */}
                             <div className="w-full sm:pl-20 md:pl-0 md:pr-14 md:w-5/12">
                                 <div className="glass-card p-8 rounded-2xl border border-white/5 group-hover:border-white/20 hover:border-green-400/20 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
                                     <h4 className="text-2xl font-bold text-white mb-3 flex items-start sm:items-center gap-4 flex-col sm:flex-row lg:flex-row-reverse lg:text-right">
@@ -82,8 +103,6 @@ const Contact = () => {
                                         <span className="flex-1">Vaish Sr. Sec. School</span>
                                     </h4>
                                     <p className="text-gray-400/90 text-base font-medium lg:text-right">Intermediate (PCM)</p>
-                                    
-                                    {/* Mobile Meta */}
                                     <div className="md:hidden mt-6 pt-5 border-t border-white/5 flex justify-between items-center">
                                         <span className="text-gray-300 font-bold font-mono text-xl group-hover:text-green-400 transition-colors">78%</span>
                                         <span className="text-gray-500 text-xs uppercase font-bold text-right ml-2">Apr' 21 - Mar' 22</span>
@@ -99,16 +118,11 @@ const Contact = () => {
                             transition={{ duration: 0.5, delay: 0.2 }}
                             className="relative flex flex-col md:flex-row md:justify-between items-center w-full group"
                         >
-                            {/* Dot */}
                             <div className="absolute left-4 sm:left-8 md:left-1/2 -translate-x-1/2 w-5 h-5 bg-gray-600 group-hover:bg-green-400 rounded-full border-4 border-[#080808] z-10 transition-colors duration-300 hidden sm:block"></div>
-                            
-                            {/* Content Left */}
                             <div className="hidden md:block w-5/12 text-right pr-14">
                                 <p className="text-gray-300 group-hover:text-green-400 font-bold text-3xl font-mono tracking-tight transition-colors">87.4%</p>
                                 <p className="text-gray-500 text-sm mt-2 uppercase tracking-widest font-bold">Apr' 19 - Mar' 20</p>
                             </div>
-                            
-                            {/* Content Right */}
                             <div className="w-full sm:pl-20 md:pl-14 md:w-5/12">
                                 <div className="glass-card p-8 rounded-2xl border border-white/5 group-hover:border-white/20 hover:border-green-400/20 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
                                     <h4 className="text-2xl font-bold text-white mb-3 flex items-start sm:items-center gap-4 flex-col sm:flex-row">
@@ -116,8 +130,6 @@ const Contact = () => {
                                         <span className="flex-1">Vaish Sr. Sec. School</span>
                                     </h4>
                                     <p className="text-gray-400/90 text-base font-medium">Matriculation</p>
-                                    
-                                    {/* Mobile Meta */}
                                     <div className="md:hidden mt-6 pt-5 border-t border-white/5 flex justify-between items-center">
                                         <span className="text-gray-300 font-bold font-mono text-xl group-hover:text-green-400 transition-colors">87.4%</span>
                                         <span className="text-gray-500 text-xs uppercase font-bold text-right ml-2">Apr' 19 - Mar' 20</span>
@@ -145,11 +157,11 @@ const Contact = () => {
 
                         <div className="flex flex-col gap-4 mb-8">
                             <a href={`mailto:${CONTACT_INFO.email}`} className="flex items-center gap-4 p-4 bg-white/5 hover:bg-white/10 rounded-lg transition text-white border border-white/5 hover:border-green-400/30 group">
-                                <span className="bg-green-500/20 p-3 rounded-full text-green-400 group-hover:scale-110 transition-transform"><i className="fas fa-envelope"></i></span> 
+                                <span className="bg-green-500/20 p-3 rounded-full text-green-400 group-hover:scale-110 transition-transform"><i className="fas fa-envelope"></i></span>
                                 <span className="break-all">{CONTACT_INFO.email}</span>
                             </a>
                             <a href={`tel:${CONTACT_INFO.phone}`} className="flex items-center gap-4 p-4 bg-white/5 hover:bg-white/10 rounded-lg transition text-white border border-white/5 hover:border-green-400/30 group">
-                                <span className="bg-green-500/20 p-3 rounded-full text-green-400 group-hover:scale-110 transition-transform"><i className="fas fa-phone"></i></span> 
+                                <span className="bg-green-500/20 p-3 rounded-full text-green-400 group-hover:scale-110 transition-transform"><i className="fas fa-phone"></i></span>
                                 <span>{CONTACT_INFO.phone}</span>
                             </a>
                         </div>
@@ -167,29 +179,52 @@ const Contact = () => {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="glass-card p-10 rounded-2xl border border-green-400/20 lg:w-1/2"
                     >
-                        <form onSubmit={(e) => {
-                            e.preventDefault();
-                            const name = e.target.name.value;
-                            const email = e.target.email.value;
-                            const message = e.target.message.value;
-                            window.location.href = `mailto:${CONTACT_INFO.email}?subject=Message from ${name}&body=${encodeURIComponent(message + '\n\nFrom: ' + name + ' (' + email + ')')}`;
-                        }} className="flex flex-col gap-5">
-                            <div>
-                                <label htmlFor="name" className="block text-gray-400 text-sm font-semibold mb-2">Your Name</label>
-                                <input type="text" id="name" name="name" required className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:bg-white/10 focus:outline-none focus:border-green-400 transition-all" placeholder="John Doe" />
+                        {status === 'success' ? (
+                            <div className="flex flex-col items-center justify-center h-full gap-4 py-10 text-center">
+                                <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center">
+                                    <i className="fas fa-check text-green-400 text-2xl"></i>
+                                </div>
+                                <h4 className="text-white text-xl font-bold">Message Sent!</h4>
+                                <p className="text-gray-400">Thanks for reaching out. I'll get back to you soon.</p>
+                                <button
+                                    onClick={() => setStatus('idle')}
+                                    className="mt-4 text-sm text-green-400 hover:text-green-300 underline underline-offset-4 transition"
+                                >
+                                    Send another message
+                                </button>
                             </div>
-                            <div>
-                                <label htmlFor="email" className="block text-gray-400 text-sm font-semibold mb-2">Your Email</label>
-                                <input type="email" id="email" name="email" required className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:bg-white/10 focus:outline-none focus:border-green-400 transition-all" placeholder="john@example.com" />
-                            </div>
-                            <div>
-                                <label htmlFor="message" className="block text-gray-400 text-sm font-semibold mb-2">Your Message</label>
-                                <textarea id="message" name="message" rows="4" required className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:bg-white/10 focus:outline-none focus:border-green-400 transition-all resize-none" placeholder="Hello Mohit, I'd like to talk about..."></textarea>
-                            </div>
-                            <button type="submit" className="mt-2 w-full py-3 px-6 bg-green-500 hover:bg-green-400 text-black font-bold tracking-wide rounded-lg transition-all duration-300 transform hover:-translate-y-1 shadow-[0_0_15px_rgba(34,197,94,0.3)] hover:shadow-[0_0_25px_rgba(34,197,94,0.5)] flex justify-center items-center gap-2">
-                                Send Message <i className="fas fa-paper-plane"></i>
-                            </button>
-                        </form>
+                        ) : (
+                            <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                                <div>
+                                    <label htmlFor="name" className="block text-gray-400 text-sm font-semibold mb-2">Your Name</label>
+                                    <input type="text" id="name" name="name" required className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:bg-white/10 focus:outline-none focus:border-green-400 transition-all" placeholder="John Doe" />
+                                </div>
+                                <div>
+                                    <label htmlFor="email" className="block text-gray-400 text-sm font-semibold mb-2">Your Email</label>
+                                    <input type="email" id="email" name="email" required className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:bg-white/10 focus:outline-none focus:border-green-400 transition-all" placeholder="john@example.com" />
+                                </div>
+                                <div>
+                                    <label htmlFor="message" className="block text-gray-400 text-sm font-semibold mb-2">Your Message</label>
+                                    <textarea id="message" name="message" rows="4" required className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:bg-white/10 focus:outline-none focus:border-green-400 transition-all resize-none" placeholder="Hello Mohit, I'd like to talk about..."></textarea>
+                                </div>
+                                {status === 'error' && (
+                                    <p className="text-red-400 text-sm flex items-center gap-2">
+                                        <i className="fas fa-exclamation-circle"></i> Something went wrong. Please try again or email me directly.
+                                    </p>
+                                )}
+                                <button
+                                    type="submit"
+                                    disabled={status === 'loading'}
+                                    className="mt-2 w-full py-3 px-6 bg-green-500 hover:bg-green-400 disabled:opacity-60 disabled:cursor-not-allowed text-black font-bold tracking-wide rounded-lg transition-all duration-300 transform hover:-translate-y-1 shadow-[0_0_15px_rgba(34,197,94,0.3)] hover:shadow-[0_0_25px_rgba(34,197,94,0.5)] flex justify-center items-center gap-2"
+                                >
+                                    {status === 'loading' ? (
+                                        <><i className="fas fa-spinner fa-spin"></i> Sending...</>
+                                    ) : (
+                                        <>Send Message <i className="fas fa-paper-plane"></i></>
+                                    )}
+                                </button>
+                            </form>
+                        )}
                     </motion.div>
                 </div>
             </div>
