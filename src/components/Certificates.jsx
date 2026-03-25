@@ -28,6 +28,16 @@ const Certificates = () => {
                             <p className="text-gray-500 text-xs mb-1">{cert.date}</p>
                             <h4 className="text-lg font-bold text-white">{cert.title}</h4>
                             <p className="text-sm text-gray-400 mt-2">{cert.desc}</p>
+                            {cert.link && (
+                                <a
+                                    href={cert.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-block mt-3 text-sm text-green-400 hover:text-green-300 transition-colors"
+                                >
+                                    View Credential <i className="fas fa-external-link-alt ml-1 text-xs"></i>
+                                </a>
+                            )}
                         </motion.div>
                     ))}
                 </div>

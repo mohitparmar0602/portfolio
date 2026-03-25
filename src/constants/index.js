@@ -3,6 +3,7 @@ export const NAV_LINKS = [
     { id: "#skills", label: "Skills" },
     { id: "#projects", label: "Projects" },
     { id: "#certificates", label: "Certificates" },
+    { id: "#education", label: "Education" },
     { id: "#contact", label: "Contact" },
 ];
 
@@ -11,10 +12,19 @@ export const HERO_CONTENT = {
     name: "PARMAR",
     title: "Full Stack Developer",
     description: "I build scalable, secure, and production-ready web applications.",
-    resumeLink: "#",
+    resumeLink: "https://drive.google.com/file/d/1g-3Jp4cArmmwWyztsBA8_hscxp2lBEXG/view?usp=sharing",
 };
 
 export const PROJECTS = [
+    {
+        title: "Grow Green",
+        role: "Full Stack",
+        date: "Recent",
+        icon: "fas fa-leaf",
+        desc: "A green initiative project focused on environmental sustainability.",
+        tags: ["Web", "Development"],
+        link: "https://github.com/mohitparmar0602/GrowGreen"
+    },
     {
         title: "Lost & Found Tracker",
         role: "PHP, JS, HTML",
@@ -102,9 +112,9 @@ export const SKILLS = [
 ];
 
 export const CERTIFICATES = [
-    { date: "Apr '25", title: "Cloud Computing", desc: "Specialized training in cloud infrastructure." },
-    { date: "Feb '24", title: "C Programming", desc: "Mastering the C Language for Beginners." },
-    { date: "Oct '23", title: "Responsive Web Design", desc: "Legacy V8 Certification." },
+    { date: "Apr '25", title: "Cloud Computing", desc: "Specialized training in cloud infrastructure.", link: "https://drive.google.com/file/d/1DcGilQJvAYL3XCMPdWzTs2gIBRnRyISq/view?usp=sharing" },
+    { date: "Feb '24", title: "C Programming", desc: "Mastering the C Language for Beginners.", link: "https://drive.google.com/file/d/1KOPJPqxQZMkr8_7cNeFojPAFBkmNVjyQ/view?usp=sharing" },
+    { date: "Oct '23", title: "Responsive Web Design", desc: "Legacy V8 Certification.", link: "https://drive.google.com/file/d/176_LXxG8JZPPAp4G8SgxmsbGmaI4sW01/view?usp=sharing" },
 ];
 
 export const CONTACT_INFO = {

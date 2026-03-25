@@ -52,7 +52,8 @@ const Projects = () => {
                         variants={cardVariants}
                         className="glass-card p-6 rounded-xl hover-neon group relative overflow-hidden"
                     >
-                        <div className="flex justify-between items-start mb-4">
+                        <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                        <div className="flex justify-between items-start mb-4 relative z-10">
                             <i className={`${project.icon} text-4xl text-gray-700 group-hover:text-green-400 transition-colors`}></i>
                             <span className="text-xs font-mono text-gray-500">{project.date}</span>
                         </div>
