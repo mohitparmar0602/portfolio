@@ -5,42 +5,40 @@ import { motion } from 'framer-motion';
 const Projects = () => {
     const containerVariants = {
         hidden: {},
-        visible: {
-            transition: {
-                staggerChildren: 0.1,
-            },
-        },
+        visible: { transition: { staggerChildren: 0.12 } },
     };
 
     const cardVariants = {
-        hidden: { opacity: 0, y: 30 },
+        hidden: { opacity: 0, y: 40 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
     };
 
     return (
         <section id="projects" className="py-20 max-w-7xl mx-auto px-6 scroll-mt-24">
-            <div className="flex justify-between items-end mb-12">
+            <div className="flex justify-between items-end mb-14">
                 <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
                 >
                     <h3 className="text-sm font-bold text-green-400 tracking-widest uppercase mb-2">Portfolio</h3>
-                    <h2 className="text-3xl md:text-4xl font-bold text-white">Featured Projects</h2>
+                    <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight">
+                        Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600">Projects</span>
+                    </h2>
                 </motion.div>
                 <motion.a
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
                     href="https://github.com/mohitparmar0602" target="_blank" rel="noopener noreferrer"
-                    className="hidden md:inline-block text-gray-400 hover:text-white transition"
+                    className="hidden md:flex items-center gap-2 text-sm font-bold text-gray-400 hover:text-white border border-white/10 hover:border-white/30 px-4 py-2 rounded-full transition-all duration-300"
                 >
-                    View Github <i className="fab fa-github ml-2"></i>
+                    <i className="fab fa-github"></i> All Projects
                 </motion.a>
             </div>
 
             <motion.div
-                className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+                className="grid md:grid-cols-2 lg:grid-cols-3 gap-7"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-50px" }}
@@ -50,23 +48,36 @@ const Projects = () => {
                     <motion.div
                         key={index}
                         variants={cardVariants}
-                        className="glass-card p-6 rounded-xl hover-neon group relative overflow-hidden"
+                        whileHover={{ y: -8 }}
+                        className="group glass-card rounded-2xl overflow-hidden border border-white/5 hover:border-green-400/40 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(34,197,94,0.12)] flex flex-col"
                     >
-                        <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                        <div className="flex justify-between items-start mb-4 relative z-10">
-                            <i className={`${project.icon} text-4xl text-gray-700 group-hover:text-green-400 transition-colors`}></i>
-                            <span className="text-xs font-mono text-gray-500">{project.date}</span>
+                        {/* Card top banner */}
+                        <div className="relative h-16 bg-gradient-to-br from-green-900/30 via-[#111] to-[#0a0a0a] flex items-center justify-between px-6 border-b border-white/5 group-hover:from-green-800/30 transition-all duration-500">
+                            <i className={`${project.icon} text-4xl text-gray-700 group-hover:text-green-400 transition-colors duration-300`}></i>
+                            <span className="text-xs font-mono font-bold text-gray-600 bg-white/5 px-3 py-1 rounded-full border border-white/5">{project.date}</span>
                         </div>
-                        <h4 className="text-xl font-bold text-white mb-2">{project.title}</h4>
-                        <p className="text-gray-400 text-sm mb-4">{project.desc}</p>
-                        <div className="flex flex-wrap gap-2 mb-6">
-                            {project.tags.map((tag, i) => (
-                                <span key={i} className="text-xs px-2 py-1 bg-white/5 rounded text-gray-300">{tag}</span>
-                            ))}
+
+                        {/* Card body */}
+                        <div className="p-7 flex flex-col flex-1">
+                            <h4 className="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors duration-300">{project.title}</h4>
+                            <p className="text-gray-400 text-sm leading-relaxed mb-5 flex-1">{project.desc}</p>
+
+                            <div className="flex flex-wrap gap-2 mb-6">
+                                {project.tags.map((tag, i) => (
+                                    <span key={i} className="text-xs px-3 py-1 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 font-medium">{tag}</span>
+                                ))}
+                            </div>
+
+                            <a
+                                href={project.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mt-auto flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-white/5 hover:bg-green-500 border border-white/10 hover:border-green-400 text-gray-300 hover:text-black font-bold text-sm rounded-lg transition-all duration-300 group/btn"
+                            >
+                                View Project
+                                <i className="fas fa-arrow-right text-xs group-hover/btn:translate-x-1 transition-transform duration-300"></i>
+                            </a>
                         </div>
-                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-green-400 text-sm font-bold hover:underline">
-                            View Project <i className="fas fa-arrow-right ml-2"></i>
-                        </a>
                     </motion.div>
                 ))}
             </motion.div>
@@ -75,3 +86,4 @@ const Projects = () => {
 };
 
 export default Projects;
+

@@ -5,6 +5,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Certificates from './components/Certificates';
+import Achievements from './components/Achievements';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { motion, useScroll, useSpring } from "framer-motion";
@@ -30,6 +31,7 @@ function App() {
       <Skills />
       <Projects />
       <Certificates />
+      <Achievements />
       <Contact />
       <Footer />
     </div>

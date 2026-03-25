@@ -3,6 +3,7 @@ export const NAV_LINKS = [
     { id: "#skills", label: "Skills" },
     { id: "#projects", label: "Projects" },
     { id: "#certificates", label: "Certificates" },
+    { id: "#achievements", label: "Achievements" },
     { id: "#education", label: "Education" },
     { id: "#contact", label: "Contact" },
 ];
@@ -23,17 +24,9 @@ export const PROJECTS = [
         icon: "fas fa-leaf",
         desc: "A green initiative project focused on environmental sustainability.",
         tags: ["Web", "Development"],
-        link: "https://github.com/mohitparmar0602/GrowGreen"
+        link: "https://growgreen-gamma.vercel.app/"
     },
-    {
-        title: "Lost & Found Tracker",
-        role: "PHP, JS, HTML",
-        date: "Jun '25",
-        icon: "fas fa-plane-departure",
-        desc: "Airport item tracking system with secure hashing and user authentication.",
-        tags: ["PHP", "JS", "HTML"],
-        link: "https://github.com/mohitparmar0602"
-    },
+
     {
         title: "Cloud MRI Storage",
         role: "React, Node, MongoDB",
@@ -43,24 +36,7 @@ export const PROJECTS = [
         tags: ["React", "Node", "MongoDB"],
         link: "https://github.com/mohitparmar0602"
     },
-    {
-        title: "Tech Support Bot",
-        role: "Flask, React, API",
-        date: "Apr '25",
-        icon: "fas fa-robot",
-        desc: "Automated chatbot using external APIs and Flask backend for query processing.",
-        tags: ["Flask", "React", "API"],
-        link: "https://github.com/mohitparmar0602"
-    },
-    {
-        title: "Disk Scheduling Sim",
-        role: "JavaScript, Algorithms, CSS",
-        date: "Apr '25",
-        icon: "fas fa-hdd",
-        desc: "Visual simulator for disk head algorithms, calculating seek time dynamically.",
-        tags: ["JavaScript", "Algorithms", "CSS"],
-        link: "https://github.com/mohitparmar0602"
-    },
+
     {
         title: "Language Learning Site",
         role: "HTML, CSS, UI/UX",
@@ -68,7 +44,7 @@ export const PROJECTS = [
         icon: "fas fa-language",
         desc: "Interactive interface for learning programming languages with responsive UI.",
         tags: ["HTML", "CSS", "UI/UX"],
-        link: "https://github.com/mohitparmar0602"
+        link: "https://language-learning-website-henna.vercel.app/"
     }
 ];
 
@@ -96,7 +72,7 @@ export const SKILLS = [
         ]
     },
     {
-        category: "Backend Languages",
+        category: "Backend",
         items: [
             { name: "Node.js", icon: "fab fa-node", color: "text-green-500" },
             { name: "PHP", icon: "fab fa-php", color: "text-purple-400" },
