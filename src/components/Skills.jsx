@@ -31,7 +31,7 @@ const Skills = () => {
                     className="text-center mb-16"
                 >
                     <h3 className="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight">
-                        Technical <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600">Skills</span>
+                        My <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600">Skills</span>
                     </h3>
                     <p className="text-gray-400 max-w-2xl mx-auto text-lg md:text-xl">A comprehensive overview of my technical expertise, tools, and technologies.</p>
                 </motion.div>

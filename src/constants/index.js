@@ -84,6 +84,14 @@ export const SKILLS = [
             { name: "MySQL", icon: "fas fa-database", color: "text-blue-400" },
             { name: "MongoDB", icon: "fas fa-leaf", color: "text-green-500" },
         ]
+    },
+    {
+        category: "Soft Skills",
+        items: [
+            { name: "Collaboration", icon: "fas fa-users", color: "text-blue-400" },
+            { name: "Adaptability", icon: "fas fa-sync-alt", color: "text-green-400" },
+            { name: "Team Player", icon: "fas fa-hands-helping", color: "text-purple-400" },
+        ]
     }
 ];
 
