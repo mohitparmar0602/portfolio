@@ -22,6 +22,7 @@ export const PROJECTS = [
         role: "Full Stack",
         date: "Recent",
         icon: "fas fa-leaf",
+        image: "/grow-green.png",
         desc: "A green initiative project focused on environmental sustainability.",
         tags: ["Web", "Development"],
         link: "https://growgreen-gamma.vercel.app/"
@@ -32,6 +33,7 @@ export const PROJECTS = [
         role: "React, Node, MongoDB",
         date: "Apr '25",
         icon: "fas fa-brain",
+        image: "/cloud-mri.png",
         desc: "Cloud system for MRI scans with AI-based tumor detection reports.",
         tags: ["React", "Node", "MongoDB"],
         link: "https://github.com/mohitparmar0602"
@@ -42,6 +44,7 @@ export const PROJECTS = [
         role: "HTML, CSS, UI/UX",
         date: "Sep '23",
         icon: "fas fa-language",
+        image: "/language-learning.png",
         desc: "Interactive interface for learning programming languages with responsive UI.",
         tags: ["HTML", "CSS", "UI/UX"],
         link: "https://language-learning-website-henna.vercel.app/"
@@ -97,6 +100,8 @@ export const SKILLS = [
 
 export const CERTIFICATES = [
     { date: "Apr '25", title: "Cloud Computing", desc: "Specialized training in cloud infrastructure.", link: "https://drive.google.com/file/d/1DcGilQJvAYL3XCMPdWzTs2gIBRnRyISq/view?usp=sharing" },
+    { date: "Mar '25", title: "Introduction to Hardware and Operating Systems", desc: "Fundamentals of computer hardware and OS concepts.", link: "https://drive.google.com/file/d/1Tlfj6rUPK21x3OwE9AW0p3NkorNqEl78/view?usp=sharing" },
+    { date: "Mar '25", title: "Logic building, Programming and Data Structures", desc: "Core CS fundamentals — logic, programming and DSA.", link: "https://drive.google.com/file/d/1ieSTrcq6Pngd6yD0KhPSSnDKTW1PAO-N/view?usp=sharing" },
     { date: "Feb '24", title: "C Programming", desc: "Mastering the C Language for Beginners.", link: "https://drive.google.com/file/d/1KOPJPqxQZMkr8_7cNeFojPAFBkmNVjyQ/view?usp=sharing" },
     { date: "Oct '23", title: "Responsive Web Design", desc: "Legacy V8 Certification.", link: "https://drive.google.com/file/d/176_LXxG8JZPPAp4G8SgxmsbGmaI4sW01/view?usp=sharing" },
 ];

@@ -52,10 +52,21 @@ const Projects = () => {
                         className="group glass-card rounded-2xl overflow-hidden border border-white/5 hover:border-green-400/40 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(34,197,94,0.12)] flex flex-col"
                     >
                         {/* Card top banner */}
-                        <div className="relative h-16 bg-gradient-to-br from-green-900/30 via-[#111] to-[#0a0a0a] flex items-center justify-between px-6 border-b border-white/5 group-hover:from-green-800/30 transition-all duration-500">
-                            <i className={`${project.icon} text-4xl text-gray-700 group-hover:text-green-400 transition-colors duration-300`}></i>
-                            <span className="text-xs font-mono font-bold text-gray-600 bg-white/5 px-3 py-1 rounded-full border border-white/5">{project.date}</span>
-                        </div>
+                        {project.image ? (
+                            <div className="relative bg-[#0d1a0e] flex items-center justify-center border-b border-white/5 group-hover:border-green-400/20 transition-all duration-500" style={{minHeight: '160px'}}>
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="w-full h-full"
+                                    style={{ objectFit: 'contain', maxHeight: '200px', display: 'block' }}
+                                />
+                            </div>
+                        ) : (
+                            <div className="relative h-16 bg-gradient-to-br from-green-900/30 via-[#111] to-[#0a0a0a] flex items-center justify-between px-6 border-b border-white/5 group-hover:from-green-800/30 transition-all duration-500">
+                                <i className={`${project.icon} text-4xl text-gray-700 group-hover:text-green-400 transition-colors duration-300`}></i>
+                                <span className="text-xs font-mono font-bold text-gray-600 bg-white/5 px-3 py-1 rounded-full border border-white/5">{project.date}</span>
+                            </div>
+                        )}
 
                         {/* Card body */}
                         <div className="p-7 flex flex-col flex-1">
