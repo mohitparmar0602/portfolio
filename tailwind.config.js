@@ -7,10 +7,14 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Rajdhani', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
+        serif: ['Italiana', 'serif'],
       },
       colors: {
-        'brand-black': '#050505',
+        'brand-green': '#243C34',
+        'brand-cream': '#F3EEE5',
+        'brand-accent': '#E9C46A',
+        'brand-dark': '#121212',
       }
     },
   },

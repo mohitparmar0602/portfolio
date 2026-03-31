@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Italiana&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -10,65 +10,60 @@
   }
 
   body {
-    font-family: 'Rajdhani', sans-serif;
-    @apply bg-[#050505] text-gray-300 antialiased selection:bg-green-400 selection:text-black;
-    background-image: radial-gradient(rgba(74, 222, 128, 0.1) 1px, transparent 1px);
-    background-size: 30px 30px;
+    font-family: 'Inter', sans-serif;
+    @apply bg-brand-cream text-brand-dark antialiased selection:bg-brand-accent selection:text-brand-dark;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Italiana', serif;
+    font-weight: 700;
+    color: #121212;
   }
 }
 
 @layer utilities {
+  .text-hollow {
+    -webkit-text-stroke: 1px currentColor;
+    color: transparent;
+  }
+  
   .glass {
-    background: rgba(10, 10, 10, 0.7);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    @apply bg-brand-cream/60 backdrop-blur-md border-b border-brand-dark/5;
   }
 
   .glass-card {
-    background: linear-gradient(145deg, rgba(30, 30, 30, 0.7) 0%, rgba(15, 15, 15, 0.5) 100%);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(74, 222, 128, 0.15);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    @apply bg-white/40 backdrop-blur-sm border border-brand-dark/5 shadow-sm transition-all duration-300;
   }
-
-  .reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: 0.8s cubic-bezier(0.5, 0, 0, 1);
-  }
-
-  .reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .hover-neon {
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-
-  .hover-neon:hover {
-    box-shadow: 0 0 25px rgba(74, 222, 128, 0.15);
-    border-color: rgba(74, 222, 128, 0.5);
-    transform: translateY(-8px) scale(1.02);
+  
+  .glass-card:hover {
+    @apply -translate-y-1 shadow-md border-brand-accent/30;
   }
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar to match theme */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  @apply bg-brand-cream;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 4px;
+  @apply bg-brand-green/20 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #4ade80;
+  @apply bg-brand-accent;
+}
+
+/* Specific utilities for the Han Nguyen aesthetic */
+.bg-split-hero {
+  background: linear-gradient(to bottom, theme('colors.brand-green') 50%, theme('colors.brand-dark') 50%);
+}
+
+@media (min-width: 1024px) {
+  .bg-split-hero {
+    background: linear-gradient(to right, theme('colors.brand-green') 50%, theme('colors.brand-dark') 50%);
+  }
 }

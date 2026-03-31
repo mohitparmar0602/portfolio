@@ -1,52 +1,32 @@
 import React from 'react';
-import { CONTACT_INFO } from '../constants';
 
 const Footer = () => {
     return (
-        <footer className="border-t border-white/5 bg-[#060606] mt-10">
-            <div className="max-w-6xl mx-auto px-6 py-14">
-                <div className="flex flex-col md:flex-row justify-between items-start gap-10">
-                    {/* Brand */}
-                    <div className="max-w-xs">
-                        <a href="#" className="text-2xl font-black tracking-wider text-white">
-                            MOHIT<span className="text-green-400">.DEV</span>
-                        </a>
-                        <p className="text-gray-500 text-sm mt-3 leading-relaxed">Full Stack Developer building scalable, production-ready web applications.</p>
-                        <div className="flex gap-3 mt-5">
-                            <a href={CONTACT_INFO.github} target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:border-white/30 transition-all duration-300 hover:scale-110">
-                                <i className="fab fa-github text-sm"></i>
-                            </a>
-                            <a href={CONTACT_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-blue-400 hover:border-blue-400/30 transition-all duration-300 hover:scale-110">
-                                <i className="fab fa-linkedin text-sm"></i>
-                            </a>
-                            <a href={`mailto:${CONTACT_INFO.email}`} className="w-9 h-9 flex items-center justify-center rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-green-400 hover:border-green-400/30 transition-all duration-300 hover:scale-110">
-                                <i className="fas fa-envelope text-sm"></i>
-                            </a>
-                        </div>
-                    </div>
-
-
-
-                    {/* Contact */}
-                    <div>
-                        <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-4">Contact</h4>
-                        <ul className="space-y-3">
-                            <li className="text-gray-500 text-sm flex items-center gap-2">
-                                <i className="fas fa-envelope text-green-400 w-4"></i> {CONTACT_INFO.email}
-                            </li>
-                            <li className="text-gray-500 text-sm flex items-center gap-2">
-                                <i className="fas fa-phone text-green-400 w-4"></i> {CONTACT_INFO.phone}
-                            </li>
-                        </ul>
-                    </div>
+        <footer className="py-20 bg-brand-dark text-white relative">
+            <div className="max-w-7xl mx-auto px-6 text-center">
+                <div className="text-4xl lg:text-6xl font-serif text-brand-accent mb-8 italic">
+                   Mohit Parmar
                 </div>
-            </div>
-            <div className="border-t border-white/5 py-5 text-center text-gray-600 text-xs">
-                © 2026 <span className="text-green-400 font-semibold">Mohit Parmar</span>. All rights reserved. Built with React & Vite.
+                
+                <div className="flex flex-wrap justify-center gap-10 text-[10px] font-bold tracking-[0.2em] uppercase text-white/50 mb-12">
+                   <a href="#about" className="hover:text-brand-accent transition-colors">About</a>
+                   <a href="#projects" className="hover:text-brand-accent transition-colors">Projects</a>
+                   <a href="#skills" className="hover:text-brand-accent transition-colors">Skills</a>
+                   <a href="#education" className="hover:text-brand-accent transition-colors">Education</a>
+                   <a href="#contact" className="hover:text-brand-accent transition-colors">Contact</a>
+                </div>
+
+                <p className="text-[10px] font-bold tracking-widest uppercase opacity-20">
+                    &copy; 2026 Mohit Parmar . Portfolio Inspired by <a href="https://www.behance.net/gallery/168450357/Portfolio-CV-Graphic-Design-Digital-Marketing" target="_blank" rel="noopener noreferrer" className="italic hover:text-brand-accent transition-colors underline underline-offset-4">Han Nguyen</a>
+                </p>
+                
+                <div className="mt-10 flex justify-center gap-6 text-xl text-white/30">
+                    <a href="https://github.com/mohitparmar0602" className="hover:text-brand-accent transition-colors"><i className="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/mohitparmar0602" className="hover:text-brand-accent transition-colors"><i className="fab fa-linkedin"></i></a>
+                </div>
             </div>
         </footer>
     );
 };
 
 export default Footer;
-
