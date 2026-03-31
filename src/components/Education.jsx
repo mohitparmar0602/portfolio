@@ -10,20 +10,20 @@ const EducationCard = ({ edu, index }) => (
     transition={{ duration: 0.8, delay: index * 0.1 }}
     className="bg-behance-dark text-behance-cream p-8 rounded-[2rem] relative overflow-hidden group hover:scale-[1.02] transition-all shadow-xl flex flex-col justify-between h-full border border-white/5"
   >
-    <div className="space-y-6 relative z-10">
+    <div className="space-y-6 relative z-10 flex-grow">
       <div className="space-y-2">
         <span className="text-behance-mustard font-accent font-bold tracking-[0.4em] uppercase text-[9px]">Academic</span>
-        <h3 className="text-3xl font-serif leading-tight">
-          {edu.degree}
+        <h3 className="text-2xl md:text-3xl font-serif leading-tight">
+          {edu.institution}
         </h3>
       </div>
       
-      <div className="space-y-3">
-        <p className="text-lg font-serif text-white/80 leading-snug">
-           {edu.institution}
+      <div className="space-y-2">
+        <p className="text-sm md:text-base font-accent font-bold text-behance-coral uppercase tracking-widest leading-tight">
+           {edu.degree}
         </p>
         {edu.score && (
-          <p className="inline-block px-3 py-1.5 bg-behance-coral/20 text-behance-coral text-[10px] font-accent font-bold tracking-wider uppercase rounded-md">
+          <p className="inline-block px-3 py-1.5 bg-white/5 text-white/60 text-[10px] font-accent font-bold tracking-wider uppercase rounded-md border border-white/10">
              {edu.score}
           </p>
         )}

@@ -19,7 +19,7 @@ const ProjectCard = ({ project, index }) => {
            <img 
              src={project.image} 
              alt={project.title} 
-             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+             className={`w-full h-full ${index === 0 ? "object-cover" : "object-contain p-6 md:p-10 bg-behance-dark"} group-hover:scale-110 transition-transform duration-1000`}
            />
            {/* Subtle overlay */}
            <div className="absolute inset-0 bg-behance-dark/5 group-hover:bg-transparent transition-all pointer-events-none"></div>
