@@ -13,7 +13,7 @@ const EducationCard = ({ edu, index }) => (
     <div className="space-y-6 relative z-10 flex-grow">
       <div className="space-y-2">
         <span className="text-behance-mustard font-accent font-bold tracking-[0.4em] uppercase text-[9px]">Academic</span>
-        <h3 className="text-2xl md:text-3xl font-serif leading-tight">
+        <h3 className="text-2xl md:text-3xl font-serif leading-tight text-white">
           {edu.institution}
         </h3>
       </div>
