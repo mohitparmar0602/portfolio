@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ABOUT_TEXT } from '../constants';
+import { ABOUT_TEXT, CONTACT_INFO, HERO_CONTENT } from '../constants';
 import profileImg from '../assets/profile_img.jpeg';
 
 const About = () => {
@@ -14,7 +14,7 @@ const About = () => {
            whileInView={{ opacity: 1, scale: 1 }}
            viewport={{ once: true }}
            transition={{ duration: 0.8 }}
-           className="flex justify-center items-center"
+           className="flex flex-col items-center gap-8"
         >
            <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[32rem] lg:h-[32rem] rounded-full overflow-hidden shadow-2xl border flex-shrink-0 border-behance-dark/5 group">
                <img 
@@ -22,8 +22,27 @@ const About = () => {
                    alt="Mohit Parmar" 
                    className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700"
                />
-               {/* Inner shadow overlay for depth */}
                <div className="absolute inset-0 rounded-full shadow-[inset_0_0_20px_rgba(0,0,0,0.1)] pointer-events-none"></div>
+           </div>
+
+           {/* Social Logos below Image */}
+           <div className="flex gap-8">
+               <a 
+                   href={CONTACT_INFO.github} 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   className="text-3xl text-behance-dark/30 hover:text-behance-dark hover:scale-125 transition-all duration-300"
+               >
+                   <i className="fab fa-github"></i>
+               </a>
+               <a 
+                   href={CONTACT_INFO.linkedin} 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   className="text-3xl text-behance-dark/30 hover:text-behance-teal hover:scale-125 transition-all duration-300"
+               >
+                   <i className="fab fa-linkedin"></i>
+               </a>
            </div>
         </motion.div>
 
@@ -50,6 +69,22 @@ const About = () => {
             <p>{ABOUT_TEXT.sub}</p>
           </div>
 
+          {/* Action Buttons at the last */}
+          <div className="flex flex-wrap gap-6 pt-6">
+              <a 
+                  href="#projects" 
+                  className="px-8 py-4 bg-behance-coral text-white text-xs font-accent font-bold tracking-[0.3em] uppercase rounded-full hover:bg-behance-dark transition-all shadow-lg active:scale-95"
+              >
+                  View Projects
+              </a>
+              <a 
+                  href={HERO_CONTENT.resumeLink} 
+                  download="Mohit_Parmar_CV.pdf"
+                  className="px-8 py-4 bg-transparent border-2 border-behance-mustard text-behance-dark text-xs font-accent font-bold tracking-[0.3em] uppercase rounded-full hover:bg-behance-mustard transition-all active:scale-95"
+              >
+                  Download CV
+              </a>
+          </div>
         </motion.div>
 
       </div>

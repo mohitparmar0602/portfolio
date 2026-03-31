@@ -30,6 +30,24 @@ const Hero = () => {
                             <p className="text-behance-dark/70 text-xl md:text-2xl font-accent font-medium leading-relaxed italic border-l-4 border-r-4 border-behance-mustard px-8">
                                 {HERO_CONTENT.description}
                             </p>
+
+                            {/* CTAs */}
+                            <div className="flex flex-wrap items-center justify-center gap-6 pt-4">
+                                <a 
+                                    href="#contact" 
+                                    className="px-10 py-5 bg-behance-dark text-behance-cream text-sm font-accent font-bold tracking-[0.3em] uppercase rounded-full hover:bg-behance-coral transition-all shadow-xl active:scale-95"
+                                >
+                                    Contact
+                                </a>
+                                <a 
+                                    href={HERO_CONTENT.resumeLink} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="px-10 py-5 bg-transparent border-2 border-behance-dark text-behance-dark text-sm font-accent font-bold tracking-[0.3em] uppercase rounded-full hover:bg-behance-dark hover:text-behance-cream transition-all active:scale-95"
+                                >
+                                    View Resume
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </motion.div>
