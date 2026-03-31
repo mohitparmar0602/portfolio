@@ -2,82 +2,81 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { EDUCATION } from '../constants';
 
-const EducationCard = ({ item, index }) => (
+const EducationCard = ({ edu, index }) => (
   <motion.div
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
-    transition={{ duration: 0.5, delay: index * 0.1 }}
-    className="group relative flex flex-col md:flex-row gap-8 bg-white/40 backdrop-blur-md border border-brand-dark/5 p-8 md:p-10 rounded-sm hover:shadow-2xl hover:border-brand-accent/30 transition-all duration-500 mb-8 last:mb-0"
+    transition={{ duration: 0.8, delay: index * 0.1 }}
+    className="bg-behance-dark text-behance-cream p-12 md:p-16 rounded-[4rem] relative overflow-hidden group hover:scale-[1.01] transition-all shadow-2xl flex flex-col md:flex-row justify-between gap-12"
   >
-    {/* Large Year Column */}
-    <div className="md:w-1/4 flex flex-col justify-start">
-      <span className="text-4xl md:text-5xl font-serif text-brand-accent group-hover:text-brand-accent/50 transition-colors duration-500 leading-none">
-        {item.date.split(' - ')[1] || item.date}
-      </span>
-      <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-brand-accent mt-2">
-        {item.date.split(' - ')[0]}
-      </span>
-    </div>
-
-    {/* Content Column */}
-    <div className="md:w-3/4 space-y-4">
-      <div>
-        <h4 className="text-2xl md:text-3xl font-serif text-brand-dark mb-1 leading-tight group-hover:translate-x-2 transition-transform duration-500">
-          {item.institution}
-        </h4>
-        <p className="text-brand-accent text-xs font-bold tracking-widest uppercase italic">
-          {item.degree}
+    <div className="space-y-10 relative z-10 w-full md:w-3/4">
+      <div className="space-y-2">
+        <span className="text-behance-mustard font-accent font-bold tracking-[0.5em] uppercase text-[10px]">Academic</span>
+        <h3 className="text-5xl md:text-6xl font-serif leading-none tracking-tight">
+          {edu.degree}
+        </h3>
+      </div>
+      
+      <div className="space-y-4">
+        <p className="text-2xl md:text-3xl font-serif text-white/90">
+           {edu.institution}
         </p>
+        {edu.score && (
+          <p className="inline-block px-4 py-2 bg-behance-coral/20 text-behance-coral text-[11px] font-accent font-bold tracking-[0.2em] uppercase rounded-lg">
+             {edu.score}
+          </p>
+        )}
+        <div className="w-16 h-1 bg-behance-mustard rounded-full group-hover:w-32 transition-all duration-700"></div>
       </div>
 
-      <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-brand-dark/70">
-        {item.subtitle && (
-          <span className="flex items-center gap-2">
-            <i className="fas fa-chart-line text-brand-accent/60"></i>
-            {item.subtitle}
-          </span>
-        )}
-        {item.location && (
-          <span className="flex items-center gap-2">
-            <i className="fas fa-location-dot text-brand-accent/60"></i>
-            {item.location}
-          </span>
-        )}
+      <div className="flex flex-wrap gap-4 pt-4">
+        {edu.courses && edu.courses.map((course, i) => (
+           <span key={i} className="px-4 py-2 border border-white/10 rounded-full text-[9px] font-accent font-bold tracking-widest uppercase opacity-60">
+              {course}
+           </span>
+        ))}
       </div>
     </div>
 
-    {/* Decorative corner element */}
-    <div className="absolute top-0 right-0 w-16 h-16 bg-brand-accent/5 -mr-8 -mt-8 rounded-full blur-2xl group-hover:bg-brand-accent/20 transition-all"></div>
+    <div className="md:text-right relative z-10 flex flex-col justify-center">
+       <span className="text-4xl md:text-5xl font-serif text-white leading-none mb-2">
+          {edu.duration}
+       </span>
+       <p className="text-[10px] font-accent font-bold tracking-[0.4em] uppercase text-behance-mustard">Duration</p>
+    </div>
+
+    {/* Background Decorative Element */}
+    <div className="absolute top-0 right-0 w-1/3 h-full bg-white/[0.03] -skew-x-12 translate-x-20 group-hover:translate-x-10 transition-transform duration-1000"></div>
   </motion.div>
 );
 
 const Education = () => {
   return (
-    <section id="education" className="py-24 bg-brand-cream relative overflow-hidden">
-      {/* Decorative large background text */}
-      <h2 className="absolute top-1/2 left-0 w-full text-center text-[15vw] font-serif uppercase text-hollow text-brand-dark/5 pointer-events-none select-none">
-        Education
-      </h2>
-
-      <div className="max-w-5xl mx-auto px-6 relative z-10">
-        <motion.div
-           initial={{ opacity: 0, y: 20 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true }}
-           className="text-center mb-20"
+    <section id="education" className="py-24 md:py-32 bg-behance-cream relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        
+        {/* Header Section */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-20 space-y-4"
         >
-          <h2 className="text-6xl md:text-8xl font-serif mb-4 text-brand-dark leading-none">
-            Education
-          </h2>
-          <div className="w-24 h-1 bg-brand-accent mx-auto mt-6 opacity-30"></div>
+          <span className="text-behance-coral font-accent font-bold tracking-[0.5em] uppercase text-[10px] block text-center md:text-left">Knowledge</span>
+          <div className="flex flex-col md:flex-row items-center md:items-end justify-between gap-8">
+            <h2 className="text-5xl md:text-7xl font-serif text-behance-dark leading-[0.8] tracking-tighter">Education</h2>
+            <div className="w-24 h-2 bg-behance-mustard rounded-full hidden md:block"></div>
+          </div>
         </motion.div>
 
-        <div className="space-y-6">
-          {EDUCATION.map((item, idx) => (
-            <EducationCard key={idx} item={item} index={idx} />
+        <div className="space-y-12">
+          {EDUCATION.map((edu, index) => (
+            <EducationCard key={index} edu={edu} index={index} />
           ))}
         </div>
+
       </div>
     </section>
   );

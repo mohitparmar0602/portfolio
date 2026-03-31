@@ -1,28 +1,63 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { CONTACT_INFO } from '../constants';
 
 const Footer = () => {
     return (
-        <footer className="py-20 bg-brand-dark text-white relative">
-            <div className="max-w-7xl mx-auto px-6 text-center">
-                <div className="text-4xl lg:text-6xl font-serif text-brand-accent mb-8 italic">
-                   Mohit Parmar
-                </div>
-                
-                <div className="flex flex-wrap justify-center gap-10 text-[10px] font-bold tracking-[0.2em] uppercase text-white/50 mb-12">
-                   <a href="#about" className="hover:text-brand-accent transition-colors">About</a>
-                   <a href="#projects" className="hover:text-brand-accent transition-colors">Projects</a>
-                   <a href="#skills" className="hover:text-brand-accent transition-colors">Skills</a>
-                   <a href="#education" className="hover:text-brand-accent transition-colors">Education</a>
-                   <a href="#contact" className="hover:text-brand-accent transition-colors">Contact</a>
+        <footer className="py-20 bg-behance-cream text-behance-dark border-t border-behance-dark/5 relative overflow-hidden">
+            {/* Background Decorative Text */}
+            <div className="absolute -bottom-10 right-10 text-[10vw] font-serif text-behance-dark/[0.01] pointer-events-none select-none">
+                THANKS
+            </div>
+
+            <div className="max-w-7xl mx-auto px-6 relative z-10">
+                <div className="flex flex-col md:flex-row justify-between items-center gap-12">
+                    
+                    {/* Brand/Logo */}
+                    <motion.div 
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className="flex items-center gap-6"
+                    >
+                        <div className="w-16 h-16 bg-behance-teal rounded-[1.5rem] rotate-12 flex items-center justify-center text-white text-3xl font-serif">
+                            M
+                        </div>
+                        <div className="space-y-1">
+                            <h3 className="text-3xl font-serif leading-none tracking-tight">Mohit Parmar</h3>
+                            <p className="text-[10px] font-accent font-bold tracking-[0.3em] uppercase text-behance-coral">Full-Stack Developer</p>
+                        </div>
+                    </motion.div>
+
+                    {/* Navigation */}
+                    <div className="flex flex-wrap justify-center gap-x-12 gap-y-6 text-[11px] font-accent font-bold tracking-[0.4em] uppercase text-behance-dark/60">
+                        <a href="#about" className="hover:text-behance-teal transition-colors pb-1 border-b-2 border-transparent hover:border-behance-teal">About</a>
+                        <a href="#skills" className="hover:text-behance-teal transition-colors pb-1 border-b-2 border-transparent hover:border-behance-teal">Expertise</a>
+                        <a href="#projects" className="hover:text-behance-teal transition-colors pb-1 border-b-2 border-transparent hover:border-behance-teal">Works</a>
+                        <a href="#contact" className="hover:text-behance-teal transition-colors pb-1 border-b-2 border-transparent hover:border-behance-teal">Connect</a>
+                    </div>
+
+                    {/* Copyright & Socials */}
+                    <motion.div 
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className="text-center md:text-right space-y-4"
+                    >
+                        <div className="flex justify-center md:justify-end gap-6 text-xl">
+                            <a href={CONTACT_INFO.github} target="_blank" rel="noopener noreferrer" className="text-behance-dark/40 hover:text-behance-dark transition-all"><i className="fab fa-github"></i></a>
+                            <a href={CONTACT_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="text-behance-dark/40 hover:text-behance-dark transition-all"><i className="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <p className="text-[9px] font-accent font-bold tracking-[0.2em] uppercase text-behance-dark/30">
+                            © 2024 Crafting digital worlds from India.
+                        </p>
+                    </motion.div>
+
                 </div>
 
-                <p className="text-[10px] font-bold tracking-widest uppercase opacity-20">
-                    &copy; 2026 Mohit Parmar . Portfolio Inspired by <a href="https://www.behance.net/gallery/168450357/Portfolio-CV-Graphic-Design-Digital-Marketing" target="_blank" rel="noopener noreferrer" className="italic hover:text-brand-accent transition-colors underline underline-offset-4">Han Nguyen</a>
-                </p>
-                
-                <div className="mt-10 flex justify-center gap-6 text-xl text-white/30">
-                    <a href="https://github.com/mohitparmar0602" className="hover:text-brand-accent transition-colors"><i className="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/mohitparmar0602" className="hover:text-brand-accent transition-colors"><i className="fab fa-linkedin"></i></a>
+                {/* Final modular block line */}
+                <div className="w-full h-px bg-behance-dark/10 mt-16 group relative">
+                    <div className="absolute top-0 left-0 w-20 h-px bg-behance-mustard"></div>
                 </div>
             </div>
         </footer>

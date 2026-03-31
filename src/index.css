@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Young+Serif&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -11,13 +11,12 @@
 
   body {
     font-family: 'Inter', sans-serif;
-    @apply bg-brand-cream text-brand-dark antialiased selection:bg-brand-accent selection:text-brand-dark;
+    @apply bg-behance-cream text-behance-dark antialiased px-2 md:px-0;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Italiana', serif;
-    font-weight: 700;
-    color: #121212;
+    font-family: 'Young Serif', serif;
+    @apply text-behance-dark;
   }
 }
 

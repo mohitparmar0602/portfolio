@@ -2,100 +2,123 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { PROJECTS } from '../constants';
 
-const ProjectCard = ({ project, index }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.6, delay: index * 0.1 }}
-    className="group relative overflow-hidden bg-white/40 border border-brand-dark/5 shadow-sm hover:shadow-xl transition-all duration-500 rounded-sm"
-  >
-    {/* Image Container with Overlay */}
-    <div className="relative aspect-video overflow-hidden bg-brand-dark/5">
-      <img 
-        src={project.image} 
-        alt={project.title} 
-        className={`w-full h-full ${index === 1 || index === 2 ? 'object-contain p-4' : 'object-cover'} group-hover:scale-110 transition-transform duration-700`} 
-      />
-      <div className="absolute inset-0 bg-brand-green/10 group-hover:bg-brand-green/0 transition-all duration-500"></div>
-    </div>
+const ProjectCard = ({ project, index }) => {
+  const isEven = index % 2 === 0;
 
-    {/* Content */}
-    <div className="p-8 relative">
-      <div className="flex justify-between items-start mb-4">
-        <div>
-          <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-brand-accent italic mb-1 block">
-             #{project.tags[0]}
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} gap-16 lg:gap-24 items-center mb-32 md:mb-48 group`}
+    >
+      {/* Image Block with Large Index */}
+      <div className="lg:w-1/2 relative">
+        <div className="relative aspect-[16/10] bg-behance-sage rounded-[3rem] shadow-2xl overflow-hidden group-hover:scale-[1.02] transition-transform duration-700">
+           <img 
+             src={project.image} 
+             alt={project.title} 
+             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+           />
+           {/* Subtle overlay */}
+           <div className="absolute inset-0 bg-behance-dark/5 group-hover:bg-transparent transition-all pointer-events-none"></div>
+        </div>
+
+        {/* Huge Floating Index in Serif */}
+        <div className={`absolute -top-16 ${isEven ? "-left-10" : "-right-10"} text-[15rem] font-serif leading-none text-behance-dark/[0.03] pointer-events-none select-none z-0`}>
+           0{index + 1}
+        </div>
+      </div>
+
+      {/* Content Block */}
+      <div className="lg:w-1/2 space-y-10 z-10">
+        <div className="space-y-6">
+          <span className="text-behance-coral font-accent font-bold tracking-[0.5em] uppercase text-[10px] block">
+            {project.tags[0]}
           </span>
-          <h3 className="text-3xl font-serif text-brand-dark group-hover:text-brand-accent transition-colors">
+          <h3 className="text-5xl md:text-7xl font-serif text-behance-dark tracking-tight leading-[0.9]">
             {project.title}
           </h3>
+          <p className="text-behance-dark/70 text-lg md:text-xl font-accent leading-relaxed max-w-xl">
+            {project.desc}
+          </p>
         </div>
-        <a 
-          href={project.link} 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="w-12 h-12 rounded-full border border-brand-dark/10 flex items-center justify-center hover:bg-brand-accent hover:border-brand-accent transition-all group/btn shadow-sm"
-        >
-          <i className="fas fa-arrow-up-right-from-square text-brand-dark/60 group-hover/btn:text-brand-dark"></i>
-        </a>
-      </div>
 
-      <p className="text-brand-dark/60 text-sm leading-relaxed mb-6 font-medium">
-        {project.desc}
-      </p>
+        {/* Tech Stack Pills */}
+        <div className="flex flex-wrap gap-3">
+          {project.tags.slice(1).map((tag, i) => (
+            <span 
+              key={i} 
+              className="px-6 py-2 bg-behance-dark text-behance-cream text-[10px] font-accent font-bold tracking-[0.2em] rounded-full uppercase"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
 
-      {/* Tech Stacks */}
-      <div className="flex flex-wrap gap-2">
-        {project.tags.map(tag => (
-          <span key={tag} className="text-[9px] font-bold tracking-widest uppercase px-3 py-1 bg-brand-dark/5 text-brand-dark/60 rounded-full border border-brand-dark/5">
-            {tag}
-          </span>
-        ))}
+        {/* Case Study Link Styled as a Search Bar button */}
+        <div className="pt-6">
+          <a 
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-6 px-10 py-5 bg-behance-coral text-white rounded-full text-sm font-accent font-bold tracking-[0.3em] shadow-xl hover:bg-behance-dark transition-all active:scale-95 group/btn uppercase"
+          >
+            {project.title === 'Lost & Found Tracker' ? 'View Repo' : 'View Demo'}
+            <i className="fas fa-arrow-right group-hover/btn:translate-x-2 transition-transform"></i>
+          </a>
+        </div>
       </div>
-    </div>
-  </motion.div>
-);
+    </motion.div>
+  );
+};
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-24 bg-brand-cream relative overflow-hidden text-brand-dark">
-      {/* Background Decorative Element */}
-      <div className="absolute top-0 right-0 w-1/3 h-screen bg-brand-green/5 -mr-20 -skew-x-12"></div>
-      
+    <section id="projects" className="py-24 md:py-32 bg-behance-cream relative overflow-hidden">
+      {/* Background Decorative Outline */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-[0.02] flex items-center justify-center -z-0">
+         <span className="text-[40vw] font-serif font-outline tracking-tighter">WORKS</span>
+      </div>
+
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <motion.div
-           initial={{ opacity: 0, y: 20 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true }}
-           className="mb-20"
+        
+        {/* Section Header */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-24 md:mb-40"
         >
-          <h2 className="text-6xl md:text-8xl font-serif mb-4 leading-none text-brand-dark">
-            Featured Projects
-          </h2>
-          <p className="text-brand-dark/60 max-w-lg mt-6 text-lg font-medium">A showcase of build-driven web experiences and innovative digital solutions.</p>
+          <span className="text-behance-coral font-accent font-bold tracking-[0.5em] uppercase text-[10px] mb-4 block">Portfolio</span>
+          <h2 className="text-5xl md:text-[6rem] lg:text-[7rem] font-serif text-behance-dark mb-8 leading-[0.85] tracking-tight">Featured <br /> Projects</h2>
+          <div className="w-24 h-2 bg-behance-mustard rounded-full"></div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 mb-20">
+        {/* Projects List with Zig-Zag Logic */}
+        <div className="space-y-12">
           {PROJECTS.map((project, index) => (
             <ProjectCard key={project.title} project={project} index={index} />
           ))}
         </div>
 
-        {/* View All Projects Button */}
+        {/* View All Projects Footer */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex justify-center"
+          className="mt-32 flex flex-col items-center gap-8"
         >
+          <p className="text-behance-dark/50 font-accent font-bold tracking-[0.3em] uppercase text-xs">Looking for more?</p>
           <a 
             href="https://github.com/mohitparmar0602" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="flex items-center gap-4 px-10 py-5 bg-brand-dark text-white font-bold tracking-[0.2em] uppercase rounded-full hover:bg-brand-accent hover:text-brand-dark transition-all shadow-2xl group"
+            className="flex items-center gap-6 px-12 py-6 bg-behance-teal text-white font-accent font-bold tracking-[0.3em] uppercase rounded-full shadow-2xl hover:bg-behance-dark transition-all group"
           >
-            All Projects <i className="fab fa-github text-2xl group-hover:scale-110 transition-transform"></i>
+            GitHub Archive <i className="fab fa-github text-3xl group-hover:scale-125 transition-transform"></i>
           </a>
         </motion.div>
       </div>

@@ -16,6 +16,11 @@ export const HERO_CONTENT = {
     resumeLink: "https://drive.google.com/uc?export=download&id=1g-3Jp4cArmmwWyztsBA8_hscxp2lBEXG",
 };
 
+export const ABOUT_TEXT = {
+    main: "I am a Computer Science student at Lovely Professional University with a deep-seated passion for building scalable, user-centric web applications. My journey into development began with a curiosity for how data moves across the web, leading me to master the MERN stack and backend systems.",
+    sub: "Beyond writing clean, efficient code in C++ and Python, I focus on solving complex problems through Data Structures and Algorithms. I pride myself on my soft skills, including adaptability and being a strong team player, which allow me to bridge the gap between technical details and user experience."
+};
+
 export const PROJECTS = [
     {
         title: "Grow Green",
@@ -24,7 +29,7 @@ export const PROJECTS = [
         icon: "fas fa-leaf",
         image: "/grow-green.png",
         desc: "Developed a comprehensive marketplace connecting farmers with suppliers to facilitate direct buying and selling of essential agricultural products like seeds and fertilizers.",
-        tags: ["MongoDB", "Express.js", "React.js", "Node.js"],
+        tags: ["React & Node", "Express.js", "MongoDB", "TailwindCSS"],
         link: "https://growgreen-gamma.vercel.app/"
     },
     {
@@ -53,45 +58,51 @@ export const SKILLS = [
     {
         category: "Programming Languages",
         items: [
-            { name: "C++", icon: "fas fa-code", color: "text-blue-500" },
-            { name: "Python", icon: "fab fa-python", color: "text-yellow-400" },
+            { name: "C++", icon: "fas fa-code", color: "text-blue-500", level: 4 },
+            { name: "Python", icon: "fab fa-python", color: "text-yellow-400", level: 4 },
         ]
     },
     {
         category: "Web Technologies",
         items: [
-            { name: "HTML", icon: "fab fa-html5", color: "text-orange-500" },
-            { name: "CSS", icon: "fab fa-css3-alt", color: "text-blue-500" },
-            { name: "JavaScript", icon: "fab fa-js", color: "text-yellow-400" },
+            { name: "HTML", icon: "fab fa-html5", color: "text-orange-500", level: 5 },
+            { name: "CSS", icon: "fab fa-css3-alt", color: "text-blue-500", level: 5 },
+            { name: "JavaScript", icon: "fab fa-js", color: "text-yellow-400", level: 5 },
         ]
     },
     {
         category: "Frameworks",
         items: [
-            { name: "React.js", icon: "fab fa-react", color: "text-blue-400" },
-            { name: "Express.js", icon: "fas fa-server", color: "text-gray-400" },
+            { name: "React.js", icon: "fab fa-react", color: "text-blue-400", level: 4 },
+            { name: "Express.js", icon: "fas fa-server", color: "text-gray-400", level: 4 },
         ]
     },
     {
         category: "Backend",
         items: [
-            { name: "Node.js", icon: "fab fa-node", color: "text-green-500" },
-            { name: "PHP", icon: "fab fa-php", color: "text-indigo-400" },
+            { name: "Node.js", icon: "fab fa-node", color: "text-green-500", level: 4 },
+            { name: "PHP", icon: "fab fa-php", color: "text-indigo-400", level: 4 },
         ]
     },
     {
         category: "Database Management",
         items: [
-            { name: "MySQL", icon: "fas fa-database", color: "text-blue-400" },
-            { name: "MongoDB", icon: "fas fa-leaf", color: "text-green-500" },
+            { name: "MySQL", icon: "fas fa-database", color: "text-blue-400", level: 4 },
+            { name: "MongoDB", icon: "fas fa-leaf", color: "text-green-500", level: 4 },
         ]
     },
     {
         category: "Soft Skills",
         items: [
-            { name: "Collaboration", icon: "fas fa-users" },
-            { name: "Adaptability", icon: "fas fa-sync-alt" },
-            { name: "Team Player", icon: "fas fa-hands-helping" },
+            { name: "Collaboration", icon: "fas fa-users", level: 5 },
+            { name: "Adaptability", icon: "fas fa-sync-alt", level: 5 },
+            { name: "Team Player", icon: "fas fa-hands-helping", level: 5 },
+        ]
+    },
+    {
+        category: "Tools",
+        items: [
+            { name: "Git/GitHub", icon: "fab fa-github", color: "text-white", level: 5 },
         ]
     }
 ];
@@ -100,30 +111,35 @@ export const CERTIFICATES = [
     { 
         date: "Apr '25", 
         title: "Cloud Computing", 
+        issuer: "NPTEL / Google",
         desc: "Specialized training in cloud infrastructure.", 
         link: "https://drive.google.com/file/d/1DcGilQJvAYL3XCMPdWzTs2gIBRnRyISq/view?usp=sharing" 
     },
     { 
         date: "Mar '25", 
         title: "Introduction to Hardware and Operating Systems", 
+        issuer: "Coursera / IBM",
         desc: "Fundamentals of computer hardware and OS concepts.", 
         link: "https://github.com/mohitparmar0602" 
     },
     { 
         date: "Mar '25", 
         title: "Logic building, Programming and Data Structures", 
+        issuer: "PrepInsta",
         desc: "Core CS fundamentals — logic, programming and DSA.", 
         link: "https://github.com/mohitparmar0602" 
     },
     { 
         date: "Feb '24", 
         title: "C Programming", 
+        issuer: "Great Learning",
         desc: "Mastering the C Language for Beginners.", 
         link: "https://drive.google.com/file/d/1KOPJPqxQZMkr8_7cNeFojPAFBkmNVjyQ/view?usp=sharing" 
     },
     { 
         date: "Oct '23", 
         title: "Responsive Web Design", 
+        issuer: "freeCodeCamp",
         desc: "Legacy V8 Certification.", 
         link: "https://drive.google.com/file/d/176_LXxG8JZPPAp4G8SgxmsbGmaI4sW01/view?usp=sharing" 
     },
@@ -131,42 +147,23 @@ export const CERTIFICATES = [
 
 export const ACHIEVEMENTS = [
     {
-        badge: "3 Star Silver Badge(Silver)",
-        language: "Python",
+        title: "3 Star Python Coder",
+        desc: "Achieved a 3-star rating in Python on HackerRank, demonstrating advanced language proficiency.",
         icon: "fab fa-python",
-        color: "text-brand-accent",
         platform: "HackerRank",
         stars: 3,
     },
     {
-        badge: "2 Star Bronze Badge(Bronze)",
-        language: "C++",
+        title: "2 Star C++ Expert",
+        desc: "Consistent performer in C++ challenges, earning a 2-star badge for technical logic.",
         icon: "fas fa-code",
-        color: "text-brand-accent",
         platform: "HackerRank",
         stars: 2,
     },
     {
-        badge: "1 Star Badge",
-        language: "Problem Solving (DSA)",
+        title: "DSA Problem Solver",
+        desc: "Solved complex algorithmic challenges on HackerRank, earning the Problem Solving badge.",
         icon: "fas fa-brain",
-        color: "text-brand-accent",
-        platform: "HackerRank",
-        stars: 1,
-    },
-    {
-        badge: "1 Star Badge",
-        language: "SQL",
-        icon: "fas fa-database",
-        color: "text-brand-accent",
-        platform: "HackerRank",
-        stars: 1,
-    },
-    {
-        badge: "1 Star Badge",
-        language: "Java & 10 Days of JS",
-        icon: "fab fa-java",
-        color: "text-brand-accent",
         platform: "HackerRank",
         stars: 1,
     },
@@ -182,24 +179,27 @@ export const CONTACT_INFO = {
 
 export const EDUCATION = [
     {
-        date: "Aug '23 - Present",
+        duration: "Aug' 23 - Present",
         institution: "Lovely Professional University",
-        degree: "Bachelor of Technology in Computer Science and Engineering",
-        subtitle: "CGPA: 6.55",
+        degree: "Bachelor of Technology - Computer Science and Engineering",
+        score: "CGPA: 6.55",
+        courses: ["Data Structures", "Web Dev", "Operating Systems", "Computer Networks"],
         location: "Phagwara, Punjab"
     },
     {
-        date: "Apr '21 - Mar '22",
+        duration: "Apr' 21 – Mar' 22",
         institution: "Vaish Sr. Sec. School",
         degree: "Intermediate (PCM)",
-        subtitle: "Percentage: 78%",
+        score: "Percentage: 78%",
+        courses: ["Physics", "Chemistry", "Mathematics"],
         location: "Charkhi Dadri, Haryana"
     },
     {
-        date: "Apr '19 - Mar '20",
+        duration: "Apr' 19 – Mar' 20",
         institution: "Vaish Sr. Sec. School",
         degree: "Matriculation",
-        subtitle: "Percentage: 87.4%",
+        score: "Percentage: 87.4%",
+        courses: ["General Science", "Social Studies"],
         location: "Charkhi Dadri, Haryana"
     },
 ];
