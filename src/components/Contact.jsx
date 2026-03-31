@@ -74,7 +74,7 @@ const Contact = () => {
                         <div className="space-y-6 text-center lg:text-left">
                             <span className="text-behance-coral font-accent font-bold tracking-[0.5em] uppercase text-[10px] block">Collaborate</span>
                             <h2 className="text-6xl md:text-[7rem] font-serif text-behance-dark leading-[0.8] tracking-tighter">
-                                Let's <br /> Talk.
+                                Let's <br /> Connect
                             </h2>
                         </div>
                         
