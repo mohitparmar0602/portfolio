@@ -8,9 +8,9 @@ const EducationCard = ({ edu, index }) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.8, delay: index * 0.1 }}
-    className="bg-behance-dark text-behance-cream p-12 md:p-16 rounded-[4rem] relative overflow-hidden group hover:scale-[1.01] transition-all shadow-2xl flex flex-col md:flex-row justify-between gap-12"
+    className="bg-behance-dark text-behance-cream p-8 md:p-10 rounded-[2.5rem] relative overflow-hidden group hover:scale-[1.01] transition-all shadow-2xl flex flex-col md:flex-row justify-between gap-8"
   >
-    <div className="space-y-10 relative z-10 w-full md:w-3/4">
+    <div className="space-y-6 relative z-10 w-full md:w-3/4">
       <div className="space-y-2">
         <span className="text-behance-mustard font-accent font-bold tracking-[0.5em] uppercase text-[10px]">Academic</span>
         <h3 className="text-5xl md:text-6xl font-serif leading-none tracking-tight">
