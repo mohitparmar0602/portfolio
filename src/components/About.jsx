@@ -78,7 +78,7 @@ const About = () => {
                   View Projects
               </a>
               <a 
-                  href={HERO_CONTENT.resumeLink} 
+                  href={HERO_CONTENT.resumeDownloadLink} 
                   download="Mohit_Parmar_CV.pdf"
                   className="px-8 py-4 bg-transparent border-2 border-behance-mustard text-behance-dark text-xs font-accent font-bold tracking-[0.3em] uppercase rounded-full hover:bg-behance-mustard transition-all active:scale-95"
               >

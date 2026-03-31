@@ -12,8 +12,8 @@ export const HERO_CONTENT = {
     greeting: "MOHIT",
     name: "PARMAR",
     title: "Full Stack Developer",
-    description: "I build scalable, secure, and production-ready web applications. Focused on creating efficient solutions for complex digital challenges.",
-    resumeLink: "https://drive.google.com/uc?export=download&id=1g-3Jp4cArmmwWyztsBA8_hscxp2lBEXG",
+    resumeLink: "https://drive.google.com/file/d/1g-3Jp4cArmmwWyztsBA8_hscxp2lBEXG/view?usp=sharing",
+    resumeDownloadLink: "https://drive.google.com/uc?export=download&id=1g-3Jp4cArmmwWyztsBA8_hscxp2lBEXG",
 };
 
 export const ABOUT_TEXT = {
