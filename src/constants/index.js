@@ -2,7 +2,7 @@ export const NAV_LINKS = [
     { id: "#about", label: "About" },
     { id: "#skills", label: "Skills" },
     { id: "#projects", label: "Projects" },
-    { id: "#certificates", label: "Certificates" },
+    { id: "#certificates", label: "Certifications" },
     { id: "#achievements", label: "Achievements" },
     { id: "#education", label: "Education" },
     { id: "#contact", label: "Contact" },
@@ -40,7 +40,7 @@ export const PROJECTS = [
         image: "/cloud-mri.png", // Using placeholder or keeping existing
         desc: "Implemented a system for tracking lost and found items at airports. features secure user authentication and organized item listing pages for better usability.",
         tags: ["React.js", "Node.js", "MongoDB"],
-        link: "https://github.com/mohitparmar0602"
+        link: "https://github.com/mohitparmar0602/Cloud-Based-MRI-Storage"
     },
     {
         title: "Language Learning Site",
@@ -50,7 +50,7 @@ export const PROJECTS = [
         image: "/language-learning.png", // Using placeholder or keeping existing
         desc: "Interactive interface for learning programming languages with responsive UI.",
         tags: ["HTML", "CSS"],
-        link: "https://github.com/mohitparmar0602"
+        link: "https://language-learning-website-henna.vercel.app/"
     }
 ];
 
@@ -107,43 +107,40 @@ export const SKILLS = [
     }
 ];
 
-export const CERTIFICATES = [
-    { 
-        date: "Apr '25", 
-        title: "Cloud Computing", 
-        issuer: "NPTEL / Google",
-        desc: "Specialized training in cloud infrastructure.", 
-        link: "https://drive.google.com/file/d/1DcGilQJvAYL3XCMPdWzTs2gIBRnRyISq/view?usp=sharing" 
-    },
-    { 
-        date: "Mar '25", 
-        title: "Introduction to Hardware and Operating Systems", 
-        issuer: "Coursera / IBM",
-        desc: "Fundamentals of computer hardware and OS concepts.", 
-        link: "https://github.com/mohitparmar0602" 
-    },
-    { 
-        date: "Mar '25", 
-        title: "Logic building, Programming and Data Structures", 
-        issuer: "PrepInsta",
-        desc: "Core CS fundamentals — logic, programming and DSA.", 
-        link: "https://github.com/mohitparmar0602" 
-    },
-    { 
-        date: "Feb '24", 
-        title: "C Programming", 
-        issuer: "Great Learning",
-        desc: "Mastering the C Language for Beginners.", 
-        link: "https://drive.google.com/file/d/1KOPJPqxQZMkr8_7cNeFojPAFBkmNVjyQ/view?usp=sharing" 
-    },
-    { 
-        date: "Oct '23", 
-        title: "Responsive Web Design", 
-        issuer: "freeCodeCamp",
-        desc: "Legacy V8 Certification.", 
-        link: "https://drive.google.com/file/d/176_LXxG8JZPPAp4G8SgxmsbGmaI4sW01/view?usp=sharing" 
-    },
-];
+export const CERTIFICATES = {
+    certifications: [
+        { 
+            date: "Apr '25", 
+            title: "Cloud Computing", 
+            issuer: "NPTEL",
+            desc: "Specialized training in cloud infrastructure.", 
+            link: "https://drive.google.com/file/d/1DcGilQJvAYL3XCMPdWzTs2gIBRnRyISq/view?usp=sharing" 
+        },
+        { 
+            date: "Mar '25", 
+            title: "Logic building, Programming and Data Structures", 
+            issuer: "Summer Training, LPU",
+            desc: "Core CS fundamentals — logic, programming and DSA.", 
+            link: "https://drive.google.com/file/d/1ieSTrcq6Pngd6yD0KhPSSnDKTW1PAO-N/view?usp=sharing" 
+        },
+    ],
+    certificates: [
+        { 
+            date: "Feb '24", 
+            title: "C Programming", 
+            issuer: "UDEMY",
+            desc: "Mastering the C Language for Beginners.", 
+            link: "https://drive.google.com/file/d/1KOPJPqxQZMkr8_7cNeFojPAFBkmNVjyQ/view?usp=sharing" 
+        },
+        { 
+            date: "Oct '23", 
+            title: "Responsive Web Design", 
+            issuer: "freeCodeCamp",
+            desc: "Legacy V8 Certification.", 
+            link: "https://drive.google.com/file/d/176_LXxG8JZPPAp4G8SgxmsbGmaI4sW01/view?usp=sharing" 
+        },
+    ]
+};
 
 export const ACHIEVEMENTS = [
     {

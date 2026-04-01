@@ -54,17 +54,32 @@ const Certificates = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
           <div className="space-y-4">
             <span className="text-behance-coral font-accent font-bold tracking-[0.5em] uppercase text-[10px] block">Recognition</span>
-            <h2 className="text-6xl md:text-8xl font-serif text-behance-dark leading-[0.9] tracking-tight">Certifications</h2>
+            <h2 className="text-5xl md:text-7xl font-serif text-behance-dark leading-[0.9] tracking-tight">Certifications</h2>
           </div>
           <div className="md:max-w-xs text-right">
              <p className="text-behance-dark/50 font-accent text-sm font-medium">Validating my technical expertise through industry-leading credentials.</p>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {CERTIFICATES.map((cert, index) => (
-            <CertificateCard key={index} cert={cert} index={index} />
-          ))}
+        <div className="space-y-16">
+          {/* Certifications Section */}
+          <div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {CERTIFICATES.certifications.map((cert, index) => (
+                <CertificateCard key={`certification-${index}`} cert={cert} index={index} />
+              ))}
+            </div>
+          </div>
+
+          {/* Certificates Section */}
+          <div>
+            <h3 className="text-2xl font-serif text-behance-coral mb-10 tracking-tight">Certificates</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {CERTIFICATES.certificates.map((cert, index) => (
+                <CertificateCard key={`certificate-${index}`} cert={cert} index={index} />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -56,9 +56,9 @@ const About = () => {
         >
           <div className="space-y-6">
             <span className="text-behance-coral font-accent font-bold tracking-[0.4em] uppercase text-xs block">Background</span>
-            <h3 className="text-4xl md:text-5xl font-serif leading-tight text-behance-dark">
+            <h2 className="text-3xl md:text-4xl font-serif leading-tight text-behance-dark">
               Full-stack developer with a eye for detail.
-            </h3>
+            </h2>
             <p className="text-behance-dark/70 text-lg md:text-xl font-medium leading-relaxed italic border-l-4 border-behance-mustard pl-6">
               "Code is my canvas, and logic is my brush."
             </p>

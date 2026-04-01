@@ -6,7 +6,7 @@ const Hero = () => {
     return (
         <section id="home" className="min-h-screen pt-32 pb-20 bg-behance-cream relative overflow-hidden flex items-center justify-center">
             {/* Background decorative text */}
-            <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[30vw] font-serif text-behance-dark/5 pointer-events-none select-none -z-0">
+            <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[25vw] font-serif text-behance-dark/5 pointer-events-none select-none -z-0">
                 HELLO
             </h2>
 
@@ -21,7 +21,7 @@ const Hero = () => {
                     className="w-full"
                 >
                     <div className="space-y-16">
-                        <h1 className="text-7xl lg:text-[9rem] font-serif text-behance-dark leading-[0.8] tracking-tighter">
+                        <h1 className="text-6xl lg:text-8xl font-serif text-behance-dark leading-[0.8] tracking-tighter">
                             Hello, <br />
                             I'm Mohit
                         </h1>

@@ -14,7 +14,7 @@ const AchievementCard = ({ achievement, index }) => (
       <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-behance-mustard text-3xl mb-10 group-hover:scale-110 transition-transform">
         <i className={achievement.icon}></i>
       </div>
-      <h3 className="text-3xl md:text-4xl font-serif leading-tight">
+      <h3 className="text-2xl md:text-3xl font-serif leading-tight">
         {achievement.title}
       </h3>
     </div>
@@ -41,7 +41,7 @@ const Achievements = () => {
                 {/* Header */}
                 <div className="mb-20 space-y-4">
                   <span className="text-behance-coral font-accent font-bold tracking-[0.5em] uppercase text-[10px] block">Milestones</span>
-                  <h2 className="text-6xl md:text-8xl font-serif text-behance-teal leading-[0.9] tracking-tight">Achievements</h2>
+                  <h2 className="text-5xl md:text-7xl font-serif text-behance-teal leading-[0.9] tracking-tight">Achievements</h2>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -52,7 +52,7 @@ const Achievements = () => {
             </div>
 
             {/* Background Decorative Outline */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[40vw] font-serif text-behance-dark/[0.02] pointer-events-none select-none -z-0">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[25vw] font-serif text-behance-dark/[0.02] pointer-events-none select-none -z-0">
                 AWARDS
             </div>
         </section>

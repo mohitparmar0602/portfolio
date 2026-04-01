@@ -53,6 +53,11 @@ const EducationCard = ({ edu, index }) => (
 const Education = () => {
   return (
     <section id="education" className="py-24 md:py-32 bg-behance-cream relative overflow-hidden">
+      {/* Decorative large background text */}
+      <h2 className="absolute top-1/2 left-0 w-full text-center text-[18vw] font-serif uppercase text-behance-dark/5 pointer-events-none select-none -z-0">
+        ACADEMIC
+      </h2>
+
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Header Section */}

@@ -6,7 +6,7 @@ const Skills = () => {
   return (
     <section id="skills" className="py-24 bg-behance-cream relative overflow-hidden">
       {/* Decorative large background text */}
-      <h2 className="absolute top-1/2 left-0 w-full text-center text-[15vw] font-serif uppercase text-behance-dark/5 pointer-events-none select-none -z-0">
+      <h2 className="absolute top-1/2 left-0 w-full text-center text-[12vw] font-serif uppercase text-behance-dark/5 pointer-events-none select-none -z-0">
         SKILLS
       </h2>
 
@@ -20,7 +20,7 @@ const Skills = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-7xl font-serif text-behance-dark mb-6">My Skills</h2>
+          <h2 className="text-4xl md:text-6xl font-serif text-behance-dark mb-6">My Skills</h2>
           <p className="text-behance-dark/60 text-lg md:text-xl max-w-2xl mx-auto font-medium font-accent">
             A comprehensive overview of my technical expertise and creative toolkit.
           </p>
