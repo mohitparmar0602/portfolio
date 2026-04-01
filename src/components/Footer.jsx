@@ -29,28 +29,17 @@ const Footer = () => {
                         </div>
                     </motion.div>
 
-                    {/* Navigation */}
-                    <div className="flex flex-wrap justify-center gap-x-12 gap-y-6 text-[11px] font-accent font-bold tracking-[0.4em] uppercase text-behance-dark/60">
-                        <a href="#about" className="hover:text-behance-teal transition-colors pb-1 border-b-2 border-transparent hover:border-behance-teal">About</a>
-                        <a href="#skills" className="hover:text-behance-teal transition-colors pb-1 border-b-2 border-transparent hover:border-behance-teal">Expertise</a>
-                        <a href="#projects" className="hover:text-behance-teal transition-colors pb-1 border-b-2 border-transparent hover:border-behance-teal">Works</a>
-                        <a href="#contact" className="hover:text-behance-teal transition-colors pb-1 border-b-2 border-transparent hover:border-behance-teal">Connect</a>
-                    </div>
-
-                    {/* Copyright & Socials */}
+                    {/* Socials */}
                     <motion.div 
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="text-center md:text-right space-y-4"
+                        className="text-center md:text-right"
                     >
                         <div className="flex justify-center md:justify-end gap-6 text-xl">
                             <a href={CONTACT_INFO.github} target="_blank" rel="noopener noreferrer" className="text-behance-dark/40 hover:text-behance-dark transition-all"><i className="fab fa-github"></i></a>
                             <a href={CONTACT_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="text-behance-dark/40 hover:text-behance-dark transition-all"><i className="fab fa-linkedin-in"></i></a>
                         </div>
-                        <p className="text-[9px] font-accent font-bold tracking-[0.2em] uppercase text-behance-dark/30">
-                            © 2024 Crafting digital worlds from India.
-                        </p>
                     </motion.div>
 
                 </div>

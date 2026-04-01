@@ -114,35 +114,36 @@ const Contact = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 1 }}
-                        className="bg-behance-dark p-10 md:p-16 rounded-[4rem] shadow-2xl relative overflow-hidden"
+                        className="bg-behance-dark p-8 md:p-10 rounded-[2.5rem] shadow-2xl relative overflow-hidden"
                     >
-                         <div className="relative z-10 space-y-12">
-                            <div className="space-y-4">
-                                <h3 className="text-2xl font-serif text-behance-mustard">Send a Message</h3>
-                                <p className="text-behance-cream/60 font-accent text-xs">Have a specific inquiry? Fill out the form below.</p>
+                         <div className="relative z-10 space-y-8">
+                            <div className="space-y-3">
+                                <h3 className="text-xl font-serif text-behance-mustard">Send a Message</h3>
+                                <p className="text-behance-cream/60 font-accent text-[10px]">Have a specific inquiry? Fill out the form below.</p>
                             </div>
 
                             <form 
                                 onSubmit={handleSubmit}
-                                className="space-y-10"
+                                className="space-y-6"
+                                autoComplete="off"
                             >
-                                <div className="space-y-2">
-                                    <label className="text-[9px] font-accent font-bold tracking-[0.3em] uppercase text-white/30 ml-4">Name</label>
-                                    <input type="text" name="name" required placeholder="John Doe" className="w-full bg-white/5 border border-white/10 rounded-full py-4 px-7 text-xs text-white focus:outline-none focus:border-behance-mustard transition-colors placeholder:text-white/10" />
+                                <div className="space-y-1.5">
+                                    <label className="text-[8px] font-accent font-bold tracking-[0.3em] uppercase text-white/30 ml-4">Name</label>
+                                    <input type="text" name="name" required placeholder="John Doe" autoComplete="off" className="w-full bg-white/5 border border-white/10 rounded-full py-3 px-6 text-[11px] text-white focus:outline-none focus:border-behance-mustard transition-colors placeholder:text-white/10" />
                                 </div>
-                                <div className="space-y-2">
-                                    <label className="text-[9px] font-accent font-bold tracking-[0.3em] uppercase text-white/30 ml-4">Email</label>
-                                    <input type="email" name="email" required placeholder="john@example.com" className="w-full bg-white/5 border border-white/10 rounded-full py-4 px-7 text-xs text-white focus:outline-none focus:border-behance-mustard transition-colors placeholder:text-white/10" />
+                                <div className="space-y-1.5">
+                                    <label className="text-[8px] font-accent font-bold tracking-[0.3em] uppercase text-white/30 ml-4">Email</label>
+                                    <input type="email" name="email" required placeholder="john@example.com" autoComplete="off" className="w-full bg-white/5 border border-white/10 rounded-full py-3 px-6 text-[11px] text-white focus:outline-none focus:border-behance-mustard transition-colors placeholder:text-white/10" />
                                 </div>
-                                <div className="space-y-2">
-                                    <label className="text-[9px] font-accent font-bold tracking-[0.3em] uppercase text-white/30 ml-4">Message</label>
-                                    <textarea name="message" required placeholder="Tell me about your project..." rows="4" className="w-full bg-white/5 border border-white/10 rounded-[2rem] py-4 px-7 text-xs text-white focus:outline-none focus:border-behance-mustard transition-colors placeholder:text-white/10 resize-none"></textarea>
+                                <div className="space-y-1.5">
+                                    <label className="text-[8px] font-accent font-bold tracking-[0.3em] uppercase text-white/30 ml-4">Message</label>
+                                    <textarea name="message" required placeholder="Tell me about your project..." rows="3" autoComplete="off" className="w-full bg-white/5 border border-white/10 rounded-[1.5rem] py-3 px-6 text-[11px] text-white focus:outline-none focus:border-behance-mustard transition-colors placeholder:text-white/10 resize-none"></textarea>
                                 </div>
                                 
                                 <button 
                                     type="submit" 
                                     disabled={status === "SENDING" || status === "SUCCESS"}
-                                    className={`w-full py-5 text-sm font-accent font-bold tracking-[0.4em] uppercase rounded-full transition-all shadow-xl transform active:scale-95 ${
+                                    className={`w-full py-4 text-[10px] font-accent font-bold tracking-[0.4em] uppercase rounded-full transition-all shadow-xl transform active:scale-95 ${
                                         status === "SUCCESS" 
                                         ? "bg-green-500 text-white" 
                                         : status === "ERROR"

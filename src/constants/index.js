@@ -126,6 +126,13 @@ export const CERTIFICATES = {
     ],
     certificates: [
         { 
+            date: "Mar '24", 
+            title: "The Bits and Bytes of Computer Networking", 
+            issuer: "Coursera",
+            desc: "Google IT Support Professional Certificate.", 
+            link: "https://drive.google.com/file/d/1EVVE1nnxiOp59ScnRHLh3LdQCosFyrgV/view?usp=sharing" 
+        },
+        { 
             date: "Feb '24", 
             title: "C Programming", 
             issuer: "UDEMY",

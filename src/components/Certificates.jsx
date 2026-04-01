@@ -56,9 +56,7 @@ const Certificates = () => {
             <span className="text-behance-coral font-accent font-bold tracking-[0.5em] uppercase text-[10px] block">Recognition</span>
             <h2 className="text-5xl md:text-7xl font-serif text-behance-dark leading-[0.9] tracking-tight">Certifications</h2>
           </div>
-          <div className="md:max-w-xs text-right">
-             <p className="text-behance-dark/50 font-accent text-sm font-medium">Validating my technical expertise through industry-leading credentials.</p>
-          </div>
+
         </div>
 
         <div className="space-y-16">
