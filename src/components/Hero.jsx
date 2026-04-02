@@ -32,21 +32,26 @@ const Hero = () => {
                             </p>
 
                             {/* CTAs */}
-                            <div className="flex flex-wrap items-center justify-center gap-6 pt-4">
-                                <a 
-                                    href="#contact" 
-                                    className="px-10 py-5 bg-behance-dark text-behance-cream text-sm font-accent font-bold tracking-[0.3em] uppercase rounded-full hover:bg-behance-coral transition-all shadow-xl active:scale-95"
-                                >
-                                    Contact
-                                </a>
-                                <a 
-                                    href={HERO_CONTENT.resumeLink} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    className="px-10 py-5 bg-transparent border-2 border-behance-dark text-behance-dark text-sm font-accent font-bold tracking-[0.3em] uppercase rounded-full hover:bg-behance-dark hover:text-behance-cream transition-all active:scale-95"
-                                >
-                                    View Resume
-                                </a>
+                            <div className="flex flex-col items-center gap-6">
+                                <p className="text-behance-dark/60 text-xs md:text-sm font-accent uppercase tracking-[0.3em]">
+                                    Full-stack developer with an eye for detail.
+                                </p>
+                                <div className="flex flex-wrap items-center justify-center gap-6">
+                                    <a 
+                                        href="#contact" 
+                                        className="px-10 py-5 bg-behance-dark text-behance-cream text-sm font-accent font-bold tracking-[0.3em] uppercase rounded-full hover:bg-behance-coral transition-all shadow-xl active:scale-95"
+                                    >
+                                        Contact
+                                    </a>
+                                    <a 
+                                        href={HERO_CONTENT.resumeLink} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="px-10 py-5 bg-transparent border-2 border-behance-dark text-behance-dark text-sm font-accent font-bold tracking-[0.3em] uppercase rounded-full hover:bg-behance-dark hover:text-behance-cream transition-all active:scale-95"
+                                    >
+                                        View Resume
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
