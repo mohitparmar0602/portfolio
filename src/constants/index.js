@@ -12,13 +12,14 @@ export const HERO_CONTENT = {
     greeting: "MOHIT",
     name: "PARMAR",
     title: "Full Stack Developer",
+    description: "Highly motivated Computer Science student with a focus on modern web technologies and scalable systems.",
     resumeLink: "https://drive.google.com/file/d/1g-3Jp4cArmmwWyztsBA8_hscxp2lBEXG/view?usp=sharing",
     resumeDownloadLink: "https://drive.google.com/uc?export=download&id=1g-3Jp4cArmmwWyztsBA8_hscxp2lBEXG",
 };
 
 export const ABOUT_TEXT = {
     main: "I am a Computer Science student at Lovely Professional University with a deep-seated passion for building scalable, user-centric web applications. My journey into development began with a curiosity for how data moves across the web, leading me to master the MERN stack and backend systems.",
-    sub: "Beyond writing clean, efficient code in C++ and Python, I focus on solving complex problems through Data Structures and Algorithms. I pride myself on my soft skills, including adaptability and being a strong team player, which allow me to bridge the gap between technical details and user experience."
+    sub: "Beyond writing clean, efficient code in C++ and Python, I focus on solving complex problems through Data Structures and Algorithms. I pride myself on my soft skills, including adaptability and collaboration, which allow me to bridge the gap between technical details and user experience."
 };
 
 export const PROJECTS = [
@@ -38,7 +39,7 @@ export const PROJECTS = [
         date: "Jun '25 - Jul '25",
         icon: "fas fa-search",
         image: "/cloud-mri.png", // Using placeholder or keeping existing
-        desc: "Implemented a system for tracking lost and found items at airports. features secure user authentication and organized item listing pages for better usability.",
+        desc: "Implemented a system for tracking lost and found items at airports. Features secure user authentication and organized item listing pages for better usability.",
         tags: ["React.js", "Node.js", "MongoDB"],
         link: "https://github.com/mohitparmar0602/Cloud-Based-MRI-Storage"
     },
@@ -118,9 +119,9 @@ export const CERTIFICATES = {
         },
         { 
             date: "Mar '25", 
-            title: "Logic building, Programming and Data Structures", 
+            title: "Logic Building, Programming and Data Structures", 
             issuer: "Summer Training, LPU",
-            desc: "Core CS fundamentals — logic, programming and DSA.", 
+            desc: "Core CS fundamentals — logic, programming, and Data Structures.", 
             link: "https://drive.google.com/file/d/1ieSTrcq6Pngd6yD0KhPSSnDKTW1PAO-N/view?usp=sharing" 
         },
     ],
@@ -183,7 +184,7 @@ export const CONTACT_INFO = {
 
 export const EDUCATION = [
     {
-        duration: "Aug' 23 - Present",
+        duration: "Aug '23 - Present",
         institution: "Lovely Professional University",
         degree: "Bachelor of Technology - Computer Science and Engineering",
         score: "CGPA: 6.55",
@@ -191,7 +192,7 @@ export const EDUCATION = [
         location: "Phagwara, Punjab"
     },
     {
-        duration: "Apr' 21 – Mar' 22",
+        duration: "Apr '21 – Mar '22",
         institution: "Vaish Sr. Sec. School",
         degree: "Intermediate (PCM)",
         score: "Percentage: 78%",
@@ -199,7 +200,7 @@ export const EDUCATION = [
         location: "Charkhi Dadri, Haryana"
     },
     {
-        duration: "Apr' 19 – Mar' 20",
+        duration: "Apr '19 – Mar '20",
         institution: "Vaish Sr. Sec. School",
         degree: "Matriculation",
         score: "Percentage: 87.4%",
@@ -211,7 +212,7 @@ export const EDUCATION = [
 export const EXPERIENCE = [
     {
         date: "Jun '25 - Jul '25",
-        role: "Logic Building, Programming and DS",
+        role: "Logic Building, Programming and Data Structures",
         company: "Lovely Professional University (Summer Training)",
         desc: "Completed an intensive 6-week training program. Strengthened core programming fundamentals by mastering algorithmic thinking and practical application of data structures.",
     },
